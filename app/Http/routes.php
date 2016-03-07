@@ -11,9 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'as' => '/',
+	'uses' => 'PagesController@getIndex'
+]);
+
+Route::get('users', [
+    'as' => 'users',
+    'uses' => 'PagesController@getUsersPage'
+]);
+
+
+
 
 /*
 |--------------------------------------------------------------------------
