@@ -21,6 +21,10 @@ Route::get('users', [
     'uses' => 'PagesController@getUsersPage'
 ]);
 
+Route::get('barangay', [
+    'as' => 'barangay',
+    'uses' => 'PagesController@getBarangayPage'
+]);
 
 
 

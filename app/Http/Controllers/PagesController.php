@@ -17,4 +17,9 @@ class PagesController extends Controller
     {
     	return view('pages.userspage');
     }
+
+    public function getBarangayPage()
+    {
+    	return view('pages.barangaypage');
+    }
 }
