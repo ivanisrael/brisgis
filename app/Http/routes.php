@@ -10,23 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', [
-	'as' => '/',
-	'uses' => 'PagesController@getIndex'
-]);
-
-Route::get('users', [
-    'as' => 'users',
-    'uses' => 'PagesController@getUsersPage'
-]);
-
-Route::get('barangay', [
-    'as' => 'barangay',
-    'uses' => 'PagesController@getBarangayPage'
-]);
-
-
+Route::resource('users', 'UserController');
+Route::resource('barangays', 'BarangayController');
 
 /*
 |--------------------------------------------------------------------------

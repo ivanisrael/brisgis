@@ -7,10 +7,10 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ route('/') }}"><i class='fa fa-dashboard'></i> <span>Home</span></a></li>
-            <li><a href="{{ route('users') }}"><i class='fa fa-users '></i> <span>Users</span></a></li>
-            <li><a href="{{ route('barangay') }}"><i class='fa fa-legal'></i> <span>Barangay</span></a></li>
-            <li><a href="# "><i class='fa fa-home '></i> <span>Household</span></a></li>
+            <li class="active"><a href="/"><i class='fa fa-dashboard'></i> <span>Home</span></a></li>
+            <li><a href="{{ route('users.index') }}"><i class='fa fa-users '></i> <span>Users</span></a></li>
+            <li><a href="{{ route('barangays.index') }}"><i class='fa fa-legal'></i> <span>Barangays</span></a></li>
+            <li><a href="# "><i class='fa fa-home '></i> <span>Households</span></a></li>
             <li><a href="# "><i class='fa fa-bar-chart'></i> <span>Reports</span></a></li>
             <li><a href="# "><i class='fa fa-map-marker'></i> <span>Maps</span></a></li>
         </ul><!-- /.sidebar-menu -->

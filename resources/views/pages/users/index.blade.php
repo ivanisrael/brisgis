@@ -13,7 +13,8 @@
               <div class="box">
                 <div class="box-header">
                   <div class="col-md-10">
-                  <h3 class="box-title"><strong> List of Users </strong></h3>
+                  <h3 class="box-title"><strong> List of Users
+                             {!! $user or 'No user T.T'  !!} </strong></h3>
                   </div>
                   <div class="col-md-2">
                   <button type="button" class="btn btn-primary">
