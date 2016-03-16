@@ -6,7 +6,10 @@
 	<div class="col-lg-12">
 
     <!-- Title -->
-        <h1>Barangay {{$barangay->name}}</h1>
+        <h1>Barangay {{$barangay->name}}
+		    <button type="submit" href="#" data-toggle="modal" data-target="#delete-book" style="float: right; margin-left: 5px; margin-bottom: 10px;" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash "></i> Delete</button>
+			<button type="submit" href="#" data-toggle="modal" data-target="#edit-book" style="float: right; margin-bottom: 10px;" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit "></i> Edit</button>
+		</h1>			
         <hr>
 
         <!-- Date/Time -->
