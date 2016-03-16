@@ -6,8 +6,8 @@ use brisgis\Output\Contracts\UserShowInterface;
 
 class UserShowText implements UserShowInterface {
 
-    public function show($user)
+    public function show_all($user)
     {
-        return $user->name;
+        return $user;
     }
 }

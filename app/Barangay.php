@@ -6,8 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Barangay extends Model
 {
-    private $barrangay_id;
-    private $barangay_name;
-    private $total_area;
+    private $id;
+    private $name;
+    private $municipality;
+    private $area;
+
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'municipality', 'area',
+    ];
 
 }

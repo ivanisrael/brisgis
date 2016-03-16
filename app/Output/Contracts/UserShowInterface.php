@@ -4,6 +4,6 @@ namespace brisgis\Output\Contracts;
 
 interface UserShowInterface {
 
-    public function show($user);
+    public function show_all($user);
 
 }

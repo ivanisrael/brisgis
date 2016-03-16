@@ -12,6 +12,6 @@ interface UserRepositoryInterface {
      * @param $id
      * @return mixed
      */
-    public function get($id);
+    public function get_all();
 
 }

@@ -1,45 +1,27 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-	Users
+	Barangays
 @endsection
 
+@include('pages.barangays.add_modal')
+
 @section('main-content')
+      <div class="col-lg-12">
+          <h1 class="page-header">
+              List of Barangays
+          <a href="{{route('barangays.create')}}" data-toggle="modal" data-target="#add-barangay" style="float: right;" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+              Add Barangay
+          </a>
+          </h1>
+      </div>
 
-              <!-- About Me Box -->
-          <div class="col-md-12">
-            <div class="col-md-3">
-              <div class="box box-primary">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Iligan City</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                  <p><strong><i class="fa fa-map-marker margin-r-5"></i> Information</strong></p>
-                  <p class="text-muted"><strong>Region: </strong> X</p>
-                  <p class="text-muted"><strong>Province: </strong>Lanao del Norte</p>
-                  <p class="text-muted"><strong>Zip Code: </strong>9200</p>                
-
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div>
-
-        <div class="col-md-9">       
-          <div class="row">
-            <div class="col-xs-12">
-
-              <div class="box">
-                <div class="box-header">
-                  <div class="col-md-9">
-                  <h3 class="box-title"><strong> List of Baragnay </strong></h3>
-                  </div>
-                  <div class="col-md-3">
-                  <button type="button" class="btn btn-primary">
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
-                  <strong>Add Barangay</strong>
-                  </button>
-                  </div>                </div><!-- /.box-header -->
-                <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
+    <!-- Table Content -->
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-striped">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -50,22 +32,25 @@
                       </tr>
                     </thead>
                     <tbody>
-
-                    @for ($i = 1; $i <= 5; $i++)
+ 
+                    @foreach($barangays as $barangay)
                       <tr>
-                        <td>{{ $i }}</td>
-                        <td><a href="#">Barangay {{ $i }}</a></td>
-                        <td>14</td>
-                        <td>{{ $i }}23 m^2</td>
+                        <td>{{$barangay->id}}</td>
+                        <td><a href="{{route('barangays.show', $barangay->id)}}"> {{$barangay->name}} </a></td>
+                        <td>$$ 14 $$</td>
+                        <td>{{$barangay->area}}</td>
                         <td>
                         	<center>
-                        		<button type="button" class="btn btn-link">
+                            <a href="#" data-toggle="modal" data-target="#{{$barangay->id}}delete-barangay" >
                         			<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-                        		</button>
+                        		</a>
                         	</center>
                         </td>
                       </tr>
-                     @endfor
+
+                    @include('pages.barangays.delete_modal')
+
+                     @endforeach
 
                     </tbody>
                     <tfoot>
@@ -78,10 +63,9 @@
                       </tr>
                     </tfoot>
                   </table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </div>
-      </div>
+                </div>
+              </div>
+            </div>
 @endsection
+
+@

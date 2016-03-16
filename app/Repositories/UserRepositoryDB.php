@@ -16,8 +16,8 @@ class UserRepositoryDB implements UserRepositoryInterface {
      * @param $id - The ID of the requested invoice
      * @return Eloquent object
      */
-    public function get($id) {
-        return User::find($id);
+    public function get_all() {
+        return User::all();
     }
 
 }

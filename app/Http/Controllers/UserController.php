@@ -5,6 +5,7 @@ namespace brisgis\Http\Controllers;
 use Illuminate\Http\Request;
 
 use brisgis\Http\Requests;
+use brisgis\User;
 use brisgis\UserList;
 use brisgis\Output\Contracts\UserShowInterface;
 use brisgis\Output\UserShowText;
@@ -14,11 +15,11 @@ use brisgis\Repositories\UserRepositoryDB;
 class UserController extends Controller
 {
     /**
-     * @var InvoiceRepositoryInterface
+     * @var UserRepositoryInterface
      */
     private $repo;
     /**
-     * @var InvoiceShowInterface
+     * @var UserShowInterface
      */
     private $output;
 
@@ -29,6 +30,7 @@ class UserController extends Controller
      */
     public function __construct(UserRepositoryInterface $repo, UserShowInterface $output)
     {
+        $this->middleware('auth');
         $this->repo = $repo;
         $this->output = $output;
     }
@@ -40,8 +42,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = new UserList($this->repo,1);
-        return view('pages.users.index')->with('user',$user->show($this->output));
+        $users = new UserList($this->repo);
+        return view('pages.users.index')->with('users',$users->show_all($this->output));
 
     }
 
@@ -52,7 +54,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.users.create');
     }
 
     /**
@@ -63,7 +65,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect()->route('users.index');
     }
 
     /**
@@ -108,6 +110,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+
+        return redirect()->route('pages.users.index');
     }
 }

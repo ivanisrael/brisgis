@@ -156,6 +156,7 @@ return [
         brisgis\Providers\EventServiceProvider::class,
         brisgis\Providers\RouteServiceProvider::class,
         brisgis\Providers\UserServiceProvider::class,
+        brisgis\Providers\BarangayServiceProvider::class,
 
     ],
 

@@ -10,12 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::resource('users', 'UserController');
-Route::resource('barangays', 'BarangayController');
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +25,15 @@ Route::resource('barangays', 'BarangayController');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
+    Route::resource('users', 'UserController');
+	Route::resource('barangays', 'BarangayController');
+	Route::resource('households', 'HouseholdController');
+
 });
+
+
+

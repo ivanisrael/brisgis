@@ -9,12 +9,12 @@ class UserList
 {
     private $user;
 
-    function __construct(UserRepositoryInterface $repo, $id)
+    function __construct(UserRepositoryInterface $repo)
     {
-        $this->user = $repo->get($id);
+        $this->user = $repo->get_all();
     }
 
-    public function show(UserShowInterface $i){
-        return $i->show($this->user);
+    public function show_all(UserShowInterface $i){
+        return $i->show_all($this->user);
     }
 }
