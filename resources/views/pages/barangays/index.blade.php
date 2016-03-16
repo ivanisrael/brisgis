@@ -11,7 +11,7 @@
       <div class="col-lg-12">
           <h1 class="page-header">
               List of Barangays
-          <a href="{{route('barangays.create')}}" data-toggle="modal" data-target="#add-barangay" style="float: right;" class="btn btn-primary">
+          <a data-toggle="modal" data-target="#add-barangay" style="float: right;" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
               Add Barangay
           </a>

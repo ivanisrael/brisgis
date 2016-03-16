@@ -53,7 +53,7 @@ class BarangayController extends Controller
      */
     public function create()
     {
-        return view('pages.barangays.create');
+        //return view('pages.barangays.create');
     }
 
     /**
