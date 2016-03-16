@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBarangayAdminTable extends Migration
+class CreatePurokTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateBarangayAdminTable extends Migration
      */
     public function up()
     {
-        Schema::create('barangay_admins', function (Blueprint $table) {
+        Schema::create('puroks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
             $table->integer('barangay_id')->unsigned();
+            $table->string('name');
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('barangay_id')->references('id')->on('barangays')->onDelete('cascade');
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateBarangayAdminTable extends Migration
      */
     public function down()
     {
-        Schema::drop('barangays');
+        Schema::drop('puroks');
     }
 }
