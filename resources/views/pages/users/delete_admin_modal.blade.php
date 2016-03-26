@@ -12,7 +12,7 @@
 					<div class="col-lg-12 panel">
 						<div class="panel-body">
 							<div class="form-group">
-								<strong><label>Are you sure you want to delete User {{$user->name}}? </label></strong>
+								<center><strong><label>Are you sure you want to delete Admin {{$user->first_name}} {{$user->last_name}}? </label></strong></center>
 							</div>
 							<div class="form-group">
 								<input type="submit" name="submit" class="btn btn-danger pull-right" value="Delete User">

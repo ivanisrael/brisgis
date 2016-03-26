@@ -3,7 +3,6 @@
 namespace brisgis\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use brisgis\Http\Requests;
 use brisgis\User;
 use brisgis\UserList;
@@ -58,7 +57,7 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store Admin a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

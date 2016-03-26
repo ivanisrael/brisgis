@@ -4,19 +4,19 @@
 	Users
 @endsection
 
+@include('pages.users.add_admin_modal')
+
 @section('main-content')
+  <div class="col-lg-12">
+      <h1 class="page-header">
+          List of Admins
+      <a data-toggle="modal" data-target="#add-admin" style="float: right;" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+          Add Admin
+      </a>
+      </h1>
+  </div>
 
-
-      <div class="col-lg-12">
-          <h1 class="page-header">
-              List of Users
-          <a href="{{route('users.create')}}" class="btn btn-primary" role="button" style="float: right;">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
-              Add User
-          </a>
-          </h1>
-      </div>
- 
 <!-- Table Content -->
   <div class="row">
       <div class="col-lg-12">
@@ -26,10 +26,7 @@
                   <tr>
                     <th>No.</th>
                     <th>Full Name</th>
-                    <th>Username</th>
                     <th>E-mail</th>
-                    <th>Barangay</th>
-                    <th>Capability</th>
                     <th><center>Edit</center></th>
                     <th><center>Delete</center></th>
                   </tr>
@@ -39,29 +36,26 @@
                 @foreach($users as $user)
                   <tr>
                     <td>{{$user->id}}</td>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->username}}</td>
+                    <td>{{$user->first_name}} {{$user->last_name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>$$$Temp$$$</td>
-                    <td>{{$user->capability}}</td>
                     <td>
                       <center>
-                        <button type="button" class="btn btn-link">
+                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}edit-admin" >
                           <span class="glyphicon glyphicon-edit text-black" aria-hidden="true"></span>
-                        </button>
+                        </a>
                       </center>
                     </td>
                     <td>
                       <center>
-                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}delete-user" >
+                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}delete-admin" >
                           <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
                         </a>
                       </center>
                     </td>
+
                   </tr>
-
-                  @include('pages.users.delete_modal')
-
+                  @include('pages.users.edit_admin_modal')
+                  @include('pages.users.delete_admin_modal')
                 @endforeach
 
                 </tbody>
@@ -69,10 +63,7 @@
                   <tr>
                     <th>No.</th>
                     <th>Full Name</th>
-                    <th>Username</th>
                     <th>E-mail</th>
-                    <th>Barangay</th>
-                    <th>Capability</th>
                     <th><center>Edit</center></th>
                     <th><center>Delete</center></th>
                   </tr>

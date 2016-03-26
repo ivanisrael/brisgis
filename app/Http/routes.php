@@ -30,9 +30,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
     Route::get('/', 'HomeController@index');
     Route::resource('users', 'UserController');
+    Route::resource('admins', 'AdminController');
 	Route::resource('barangays', 'BarangayController');
 	Route::resource('households', 'HouseholdController');
-
+	
 });
 
 

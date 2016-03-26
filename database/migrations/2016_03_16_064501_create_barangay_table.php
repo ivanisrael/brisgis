@@ -17,7 +17,7 @@ class CreateBarangayTable extends Migration
             $table->integer('municipality_id')->unsigned();
             $table->string('name');
 
-            $table->foreign('municipality_id')->references('id')->on('municipalitys')->onDelete('cascade');
+            $table->foreign('municipality_id')->references('id')->on('municipalities')->onDelete('cascade');
             $table->timestamps();
         });
     }
