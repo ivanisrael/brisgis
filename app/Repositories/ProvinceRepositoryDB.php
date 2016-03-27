@@ -42,4 +42,10 @@ class ProvinceRepositoryDB implements ProvinceRepositoryInterface
 
 	}
 
+	public function delete($id)
+	{
+		return Province::destroy($id);
+
+	}
+
 }

@@ -9,8 +9,9 @@
             </div>
             <div class='row modal-body' style="text-align:right">
                 <form class="form-horizontal" method="post" action="{{route('provinces.update', $province->id)}}">
+
                     <input type="hidden" name="_method" value="PUT">
-                    <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                     <div class="panel-body">
                         <div class="form-group row">

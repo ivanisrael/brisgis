@@ -5,6 +5,7 @@ namespace brisgis\Http\Controllers;
 use Illuminate\Http\Request;
 use brisgis\Http\Requests;
 use brisgis\ProvinceCRUD;
+use brisgis\Province;
 use brisgis\Repositories\Contracts\ProvinceRepositoryInterface;
 use brisgis\Repositories\ProvinceReposritoryDB;
 use brisgis\Output\Contracts\ProvinceShowInterface;
@@ -114,6 +115,8 @@ class ProvinceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $province = new ProvinceCRUD();
+        $province->deleteProvince($this->repo, $id);
+        return redirect()->route('provinces.index');
     }
 }

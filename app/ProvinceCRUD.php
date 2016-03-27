@@ -41,4 +41,9 @@ class ProvinceCRUD
         $this->province = $repo->update($request, $id);
     }
 
+    public function deleteProvince(ProvinceRepositoryInterface $repo, $id)
+    {
+        $this->province = $repo->delete($id);
+    }
+
 }

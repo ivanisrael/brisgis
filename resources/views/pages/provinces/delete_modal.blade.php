@@ -8,14 +8,15 @@
 				<h4 class="modal-title">WARNING!</h4>
 			</div>
 			<div class='row modal-body'>
-				<form method="post" action="">
+				<form method="post" action="{{route('provinces.destroy', $province->id)}}">
+				    <input type="hidden" name="_method" value="DELETE">
 					<div class="col-lg-12 panel">
 						<div class="panel-body">
 							<div class="form-group">
 								<center><strong><label>Are you sure you want to delete Province of {{$province->name}}? </label></strong></center>
 							</div>
 							<div class="form-group">
-								<input type="submit" name="submit" class="btn btn-danger pull-right" value="Delete Province">
+								<input type="submit" class="btn btn-danger pull-right" value="Delete Province">
 							</div>
 						</div>
 					</div>
