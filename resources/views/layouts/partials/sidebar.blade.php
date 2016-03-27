@@ -10,6 +10,7 @@
                 <ul class="nav navbar-nav side-nav">
                     <li class="{!! Request::is('/') || Request::is('home') ? 'active' : '' !!}"><a href="home"><i class='fa fa-dashboard'></i> <span>Home</span></a></li>
                     <li class="{!! Request::is('users') ? 'active' : '' !!}"><a href="{{ route('users.index') }}"><i class='fa fa-users '></i> <span>Users</span></a></li>
+                    <li class="{!! Request::is('provinces') ? 'active' : '' !!}"><a href="{{ route('provinces.index') }}"><i class='fa fa-university '></i> <span>Pronvinces</span></a></li>
                     <li class="{!! Request::is('barangays') ? 'active' : '' !!}"><a href="{{ route('barangays.index') }}"><i class='fa fa-legal'></i> <span>Barangays</span></a></li>
                     <li class="{!! Request::is('households') ? 'active' : '' !!}"><a href="{{ route('households.index') }}"><i class='fa fa-home '></i> <span>Households</span></a></li>
                     <li><a href="# "><i class='fa fa-bar-chart'></i> <span>Reports</span></a></li>

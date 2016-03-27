@@ -52,7 +52,7 @@
 
               @include('pages.barangays.delete_modal')
 
-               @endforeach
+              @endforeach
 
               </tbody>
               <tfoot>

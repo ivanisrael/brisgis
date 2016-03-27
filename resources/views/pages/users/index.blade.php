@@ -4,15 +4,15 @@
 	Users
 @endsection
 
-@include('pages.users.add_admin_modal')
+@include('pages.users.add_modal')
 
 @section('main-content')
   <div class="col-lg-12">
       <h1 class="page-header">
-          List of Admins
-      <a data-toggle="modal" data-target="#add-admin" style="float: right;" class="btn btn-primary">
+          List of Users
+      <a data-toggle="modal" data-target="#add-user" style="float: right;" class="btn btn-primary">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
-          Add Admin
+          Add User
       </a>
       </h1>
   </div>
@@ -28,6 +28,7 @@
                     <th>Full Name</th>
                     <th>E-mail</th>
                     <th><center>Edit</center></th>
+                    <th><center>Password</center></th>
                     <th><center>Delete</center></th>
                   </tr>
                 </thead>
@@ -40,22 +41,30 @@
                     <td>{{$user->email}}</td>
                     <td>
                       <center>
-                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}edit-admin" >
+                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}edit-user">
                           <span class="glyphicon glyphicon-edit text-black" aria-hidden="true"></span>
                         </a>
                       </center>
                     </td>
                     <td>
                       <center>
-                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}delete-admin" >
+                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}change-password">
+                          <span class="glyphicon glyphicon-cog text-black" aria-hidden="true"></span>
+                        </a>
+                      </center>
+                    </td>
+                    <td>
+                      <center>
+                        <a href="#" data-toggle="modal" data-target="#{{$user->id}}delete-user">
                           <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
                         </a>
                       </center>
                     </td>
-
                   </tr>
-                  @include('pages.users.edit_admin_modal')
-                  @include('pages.users.delete_admin_modal')
+                  
+                  @include('pages.users.edit_modal')
+                  @include('pages.users.delete_modal')
+                  
                 @endforeach
 
                 </tbody>
@@ -65,6 +74,7 @@
                     <th>Full Name</th>
                     <th>E-mail</th>
                     <th><center>Edit</center></th>
+                    <th><center>Password</center></th>
                     <th><center>Delete</center></th>
                   </tr>
                 </tfoot>

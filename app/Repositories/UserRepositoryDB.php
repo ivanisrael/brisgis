@@ -9,15 +9,11 @@ use brisgis\Repositories\Contracts\UserRepositoryInterface;
  * Class UserRepositoryDB
  * @package brisgis\Repositories
  */
-class UserRepositoryDB implements UserRepositoryInterface {
-
-    /**
-     * Return invoice from the database
-     * @param $id - The ID of the requested invoice
-     * @return Eloquent object
-     */
-    public function get_all() {
+class UserRepositoryDB implements UserRepositoryInterface 
+{
+    public function get_all() 
+    {
         return User::all();
     }
-
+    
 }

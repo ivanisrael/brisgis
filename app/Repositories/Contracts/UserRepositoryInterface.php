@@ -6,12 +6,8 @@ namespace brisgis\Repositories\Contracts;
  * Interface UserRepository
  * @package brisgis\Repositories\Contracts
  */
-interface UserRepositoryInterface {
-
-    /**
-     * @param $id
-     * @return mixed
-     */
+interface UserRepositoryInterface 
+{
     public function get_all();
 
 }

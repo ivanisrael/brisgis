@@ -1,6 +1,6 @@
-<!--Start Delete Barangay-->
-<div id="{{$user->id}}delete-admin" class="modal fade" role="dialog">
-	<div class="modal-dialog modal-md">
+<!--Start Delete Province-->
+<div id="{{$province->id}}delete-province" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-sm">
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header modal-warning">
@@ -8,14 +8,14 @@
 				<h4 class="modal-title">WARNING!</h4>
 			</div>
 			<div class='row modal-body'>
-				<form method="post" action="{{route('users.destroy', $user->id)}}">
+				<form method="post" action="">
 					<div class="col-lg-12 panel">
 						<div class="panel-body">
 							<div class="form-group">
-								<center><strong><label>Are you sure you want to delete Admin {{$user->first_name}} {{$user->last_name}}? </label></strong></center>
+								<center><strong><label>Are you sure you want to delete Province of {{$province->name}}? </label></strong></center>
 							</div>
 							<div class="form-group">
-								<input type="submit" name="submit" class="btn btn-danger pull-right" value="Delete User">
+								<input type="submit" name="submit" class="btn btn-danger pull-right" value="Delete Province">
 							</div>
 						</div>
 					</div>
@@ -24,5 +24,5 @@
 		</div>
 	</div>
 </div>
-<!-- End Delete Barangay -->
+<!-- End Delete Province -->
 	

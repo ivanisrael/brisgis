@@ -1,6 +1,6 @@
 <!--Start Delete Barangay-->
-<div id="{{$user->id}}delete-admin" class="modal fade" role="dialog">
-	<div class="modal-dialog modal-md">
+<div id="{{$user->id}}delete-user" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-sm">
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header modal-warning">
@@ -12,7 +12,7 @@
 					<div class="col-lg-12 panel">
 						<div class="panel-body">
 							<div class="form-group">
-								<strong><label>Are you sure you want to delete User {{$user->name}}? </label></strong>
+								<center><strong><label>Are you sure you want to delete User {{$user->first_name}} {{$user->last_name}}? </label></strong></center>
 							</div>
 							<div class="form-group">
 								<input type="submit" name="submit" class="btn btn-danger pull-right" value="Delete User">

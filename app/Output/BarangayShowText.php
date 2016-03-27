@@ -4,8 +4,8 @@ namespace brisgis\Output;
 
 use brisgis\Output\Contracts\BarangayShowInterface;
 
-class BarangayShowText implements BarangayShowInterface {
-
+class BarangayShowText implements BarangayShowInterface 
+{
     public function show_all($barangay)
     {
         return $barangay;
@@ -15,4 +15,5 @@ class BarangayShowText implements BarangayShowInterface {
     {
         return $barangay;
     }
+    
 }

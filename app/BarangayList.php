@@ -2,8 +2,8 @@
 
 namespace brisgis;
 
-use brisgis\Output\Contracts\BarangayShowInterface;
 use brisgis\Repositories\Contracts\BarangayRepositoryInterface;
+use brisgis\Output\Contracts\BarangayShowInterface;
 
 class BarangayList
 {
