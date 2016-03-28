@@ -8,7 +8,7 @@
 	  <div class="panel panel-default">
 	    <div class="panel-heading">
 	      <h2>
-	      	{{$province->name}}
+	          {{$province->name}}
 	      <a href="{{route('users.create')}}" class="btn btn-primary" role="button" style="float: right;">
 	        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
 	          Add Municipality

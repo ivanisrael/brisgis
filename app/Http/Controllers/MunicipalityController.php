@@ -3,15 +3,15 @@
 namespace brisgis\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use brisgis\Http\Requests;
-use brisgis\ProvinceCRUD;
-use brisgis\Repositories\Contracts\ProvinceRepositoryInterface;
-use brisgis\Repositories\ProvinceReposritoryDB;
-use brisgis\Output\Contracts\ProvinceShowInterface;
-use brisgis\Output\ProvinceShowText;
+use brisgis\MunicipalityCRUD;
+use brisgis\Repositories\Contracts\MunicipalityRepositoryInterface;
+use brisgis\Repositories\MunicipalityReposritoryDB;
+use brisgis\Output\Contracts\MunicipalityShowInterface;
+use brisgis\Output\MunicipalityShowText;
 
-
-class ProvinceController extends Controller
+class MunicipalityController extends Controller
 {
     /**
      * @var BarangayRepositoryInterface
@@ -27,7 +27,7 @@ class ProvinceController extends Controller
      *
      * @return void
      */
-    public function __construct(ProvinceRepositoryInterface $repo, ProvinceShowInterface $output)
+    public function __construct(MunicipalityRepositoryInterface $repo, MunicipalityShowInterface $output)
     {
         $this->middleware('auth');
         $this->repo = $repo;
@@ -41,9 +41,7 @@ class ProvinceController extends Controller
      */
     public function index()
     {
-        $provinces = new ProvinceCRUD();
-        $provinces->getAllProvinces($this->repo);
-        return view('pages.provinces.index')->with('provinces',$provinces->showAllProvinces($this->output));
+        //
     }
 
     /**
@@ -64,9 +62,7 @@ class ProvinceController extends Controller
      */
     public function store(Request $request)
     {
-        $province = new ProvinceCRUD();
-        $province->createProvince($this->repo, $request);
-        return redirect()->route('provinces.index');
+        //
     }
 
     /**
@@ -75,11 +71,12 @@ class ProvinceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($province_id)
     {
-        $province = new ProvinceCRUD();
-        $province->getProvince($this->repo, $id);
-        return view('pages.provinces.show')->with('province',$province->showProvince($this->output));
+        $municipalities = new MunicipalityCRUD();
+        $municipalities->getAllMunicipalities($this->repo, $province_id);
+        return view('pages.provinces.municipalities.index')->with('municipalities',$municipalities->showAllMunicipalities($this->output));
+ 
     }
 
     /**
@@ -102,9 +99,7 @@ class ProvinceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $province = new ProvinceCRUD();
-        $province->updateProvince($this->repo, $request, $id);
-        return redirect()->route('provinces.index');
+        //
     }
 
     /**
@@ -115,8 +110,6 @@ class ProvinceController extends Controller
      */
     public function destroy($id)
     {
-        $province = new ProvinceCRUD();
-        $province->deleteProvince($this->repo, $id);
-        return redirect()->route('provinces.index');
+        //
     }
 }

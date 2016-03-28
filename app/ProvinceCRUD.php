@@ -11,12 +11,12 @@ class ProvinceCRUD
 {
 	private $province;
 
-	public function getAllProvince(ProvinceRepositoryInterface $repo)
+	public function getAllProvinces(ProvinceRepositoryInterface $repo)
 	{
 		$this->province = $repo->get_all();
 	}
 
-	public function showAllProvince(ProvinceShowInterface $i)
+	public function showAllProvinces(ProvinceShowInterface $i)
 	{
 		return $i->show_all($this->province);
 	}

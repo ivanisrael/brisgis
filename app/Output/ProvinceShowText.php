@@ -6,14 +6,14 @@ use brisgis\Output\Contracts\ProvinceShowInterface;
 
 class ProvinceShowText implements ProvinceShowInterface
 {
-	public function show_all($barangay)
+	public function show_all($province)
 	{
-		return $barangay;
+		return $province;
 	}
 
-	public function show($barangay)
+	public function show($province)
 	{
-		return $barangay;
+		return $province;
 	}
 	
 }

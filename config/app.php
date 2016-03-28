@@ -158,6 +158,7 @@ return [
         brisgis\Providers\UserServiceProvider::class,
         brisgis\Providers\BarangayServiceProvider::class,
         brisgis\Providers\ProvinceServiceProvider::class,
+        brisgis\Providers\MunicipalityServiceProvider::class,
 
     ],
 

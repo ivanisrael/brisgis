@@ -32,6 +32,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('users', 'UserController');
     Route::resource('admins', 'AdminController');
     Route::resource('provinces', 'ProvinceController');
+    Route::resource('municipalities', 'MunicipalityController');
 	Route::resource('barangays', 'BarangayController');
 	Route::resource('households', 'HouseholdController');
 	
