@@ -28,18 +28,9 @@
                 <div class="panel-heading"><center><strong>Register User</storng></center></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                        {!! csrf_field() !!}
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Capability</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" id="capability" name="capability" value="{{ old('capability') }}">
-                                    <option>Adim</option>
-                                    <option>User</option>
-                                </select>
-                            </div>
-                        </div>
+                        <input type="hidden" name="capability" value="Admin">
 
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">First Name</label>

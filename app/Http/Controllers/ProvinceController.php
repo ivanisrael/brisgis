@@ -9,29 +9,47 @@ use brisgis\Repositories\Contracts\ProvinceRepositoryInterface;
 use brisgis\Repositories\ProvinceReposritoryDB;
 use brisgis\Output\Contracts\ProvinceShowInterface;
 use brisgis\Output\ProvinceShowText;
+use brisgis\MunicipalityCRUD;
+use brisgis\Repositories\Contracts\MunicipalityRepositoryInterface;
+use brisgis\Repositories\MunicipalityReposritoryDB;
+use brisgis\Output\Contracts\MunicipalityShowInterface;
+use brisgis\Output\MunicipalityShowText;
 
 
 class ProvinceController extends Controller
 {
     /**
-     * @var BarangayRepositoryInterface
+     * @var ProvinceRepositoryInterface
      */
     private $repo;
     /**
-     * @var BarangayShowInterface
+     * @var ProvinceShowInterface
      */
     private $output;
+    /**
+     * @var MunicipalityRepositoryInterface
+     */
+    private $municipality_repo;
+    /**
+     * @var MunicipalityShowInterface
+     */
+    private $municipality_output;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(ProvinceRepositoryInterface $repo, ProvinceShowInterface $output)
+    public function __construct(ProvinceRepositoryInterface $repo, 
+                                ProvinceShowInterface $output,
+                                MunicipalityRepositoryInterface $municipality_repo, 
+                                MunicipalityShowInterface $municipality_output)
     {
         $this->middleware('auth');
         $this->repo = $repo;
         $this->output = $output;
+        $this->municipality_repo = $municipality_repo;
+        $this->municipality_output = $municipality_output;
     }
 
     /**
@@ -79,7 +97,11 @@ class ProvinceController extends Controller
     {
         $province = new ProvinceCRUD();
         $province->getProvince($this->repo, $id);
-        return view('pages.provinces.show')->with('province',$province->showProvince($this->output));
+        $municipalities = new MunicipalityCRUD();
+        $municipalities->getAllMunicipalities($this->municipality_repo, $id);
+        return view('pages.provinces.show')
+                        ->with('province',$province->showProvince($this->output))
+                        ->with('municipalities', $municipalities->showAllMunicipalities($this->municipality_output));
     }
 
     /**

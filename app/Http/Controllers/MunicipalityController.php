@@ -62,7 +62,11 @@ class MunicipalityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $province_id = $request->province_id;
+        
+        $municipality = new MunicipalityCRUD();
+        $municipality->createMunicipality($this->repo, $request, $province_id);
+        return redirect()->route('provinces.show', $province_id);
     }
 
     /**
@@ -71,12 +75,9 @@ class MunicipalityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($province_id)
+    public function show($id)
     {
-        $municipalities = new MunicipalityCRUD();
-        $municipalities->getAllMunicipalities($this->repo, $province_id);
-        return view('pages.provinces.municipalities.index')->with('municipalities',$municipalities->showAllMunicipalities($this->output));
- 
+        //
     }
 
     /**
@@ -99,7 +100,12 @@ class MunicipalityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $province_id = $request->province_id;
+
+        $municipality = new MunicipalityCRUD();
+        $municipality->updateMunicipality($this->repo, $request, $province_id, $id);
+        return redirect()->route('provinces.show', $province_id);
+
     }
 
     /**
@@ -108,8 +114,18 @@ class MunicipalityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($province_id, $municipality_id)
     {
-        //
+        $municipality = new MunicipalityCRUD();
+        $municipality->deleteMunicipality($this->repo, $province_id, $municipality_id);
+        return redirect()->route('provinces.show', $province_id);
+    }
+
+    public function remove($province_id, $municipality_id)
+    {
+        $municipality = new MunicipalityCRUD();
+        $municipality->deleteMunicipality($this->repo, $province_id, $municipality_id);
+        return redirect()->route('provinces.show', $province_id);
+
     }
 }

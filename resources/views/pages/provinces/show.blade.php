@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('main-content')
+
+@include('pages.provinces.municipalities.add_modal')
+
 <!-- Page Content -->
 <div class="row">
 
@@ -9,10 +12,10 @@
 	    <div class="panel-heading">
 	      <h2>
 	      	{{$province->name}}
-	      <a href="{{route('users.create')}}" class="btn btn-primary" role="button" style="float: right;">
-	        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
-	          Add Municipality
-	      </a>
+            <a data-toggle="modal" data-target="#add-municipality" style="float: right;" class="btn btn-primary">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+                Add Municipality
+            </a>
 	      </h2>
 	    </div>
 	    <div class="panel-body">
@@ -28,26 +31,30 @@
 	          </thead>
 	          <tbody>
 
-	          @for ($i = 1; $i <= 5; $i++)
-	            <tr>
-	              <td>{{ $i }}</td>
-	              <td>Municipality {{ $i }}</td>
-	              <td>
-	                <center>
-	                  <a href="#" data-toggle="modal" data-target="#">
-	                    <span class="glyphicon glyphicon-edit text-black" aria-hidden="true"></span>
-	                  </a>
-	                </center>
-	              </td>
-	              <td>
-	                <center>
-	                  <button type="button" class="btn btn-link">
-	                    <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-	                  </button>
-	                </center>
-	              </td>
-	            </tr>
-	          @endfor
+              @foreach($municipalities as $municipality)
+                <tr>
+                  <td>{{$municipality->id}}</td>
+                  <td>{{$municipality->name}}</td>
+                  <td>
+                    <center>
+                      <a href="#" data-toggle="modal" data-target="#{{$municipality->id}}edit-municipality" >
+                        <span class="glyphicon glyphicon-edit text-black" aria-hidden="true"></span>
+                      </a>
+                    </center>
+                  </td>
+                  <td>
+                    <center>
+                      <a href="#" data-toggle="modal" data-target="#{{$municipality->id}}delete-municipality" >
+                        <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
+                      </a>
+                    </center>
+                  </td>
+                </tr>
+
+                @include('pages.provinces.municipalities.edit_modal')
+                @include('pages.provinces.municipalities.delete_modal')
+
+              @endforeach
 
 	          </tbody>
 	          <tfoot>

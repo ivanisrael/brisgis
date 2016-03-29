@@ -17,6 +17,6 @@ interface MunicipalityRepositoryInterface
 
     public function update(Request $request, $province_id, $id);
 
-    public function delete($province_id, $id);
+    public function delete($province_id, $municipality_id);
 
 }
