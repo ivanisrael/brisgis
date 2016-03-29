@@ -34,7 +34,7 @@ class MunicipalityCRUD
 
     public function deleteMunicipality(MunicipalityRepositoryInterface $repo, $province_id, $municipality_id)
     {
-        $this->municipality = $repo->delete($province_id, $id);
+        $this->municipality = $repo->delete($province_id, $municipality_id);
     }
 }
 

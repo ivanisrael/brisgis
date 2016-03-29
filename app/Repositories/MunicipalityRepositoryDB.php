@@ -45,7 +45,7 @@ class MunicipalityRepositoryDB implements MunicipalityRepositoryInterface
 
 	}
 
-	public function delete($province_id, $muncipality_id)
+	public function delete($province_id, $municipality_id)
 	{
 		return Municipality::destroy($municipality_id);
 

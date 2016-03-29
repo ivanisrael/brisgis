@@ -8,7 +8,7 @@
 				<h4 class="modal-title">WARNING!</h4>
 			</div>
 			<div class='row modal-body'>
-				<form method="post" action="{{route('municipalities.destroy', $province->id, $municipality->id)}}">
+				<form method="post" action="{{route('municipalities.remove', [$province->id, $municipality->id])}}">
 				    <input type="hidden" name="_method" value="DELETE">
 
 					<div class="col-lg-12 panel">

@@ -114,11 +114,9 @@ class MunicipalityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($province_id, $municipality_id)
+    public function destroy($id)
     {
-        $municipality = new MunicipalityCRUD();
-        $municipality->deleteMunicipality($this->repo, $province_id, $municipality_id);
-        return redirect()->route('provinces.show', $province_id);
+        //
     }
 
     public function remove($province_id, $municipality_id)
