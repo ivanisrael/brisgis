@@ -14,7 +14,7 @@
                     <li class="{!! Request::is('barangays') ? 'active' : '' !!}"><a href="{{ route('barangays.index') }}"><i class='fa fa-legal'></i> <span>Barangays</span></a></li>
                     <li class="{!! Request::is('households') ? 'active' : '' !!}"><a href="{{ route('households.index') }}"><i class='fa fa-home '></i> <span>Households</span></a></li>
                     <li><a href="# "><i class='fa fa-bar-chart'></i> <span>Reports</span></a></li>
-                    <li><a href="# "><i class='fa fa-map-marker'></i> <span>Maps</span></a></li>
+                    <li class="{!! Request::is('maps') ? 'active' : '' !!}"><a href="{{ route('maps.index') }}"><i class='fa fa-map-marker'></i> <span>Maps</span></a></li>
                 </ul>
             </div>
         <!-- /.sidebar-menu -->

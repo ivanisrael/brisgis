@@ -35,7 +35,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('municipalities', 'MunicipalityController');
 	Route::resource('barangays', 'BarangayController');
 	Route::resource('households', 'HouseholdController');
-	
+	Route::resource('maps', 'MapController');
 });
 
 
