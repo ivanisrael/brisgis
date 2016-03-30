@@ -4,8 +4,8 @@
 <script>
 function initialize() {
   var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
+    center:new google.maps.LatLng(8.22312124,124.22121331),
+    zoom:12,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
@@ -20,50 +20,68 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div class="panel panel-default">
             <div class="panel-heading">Map Options</div>
                 <div class="panel-body">
-                	<select>
-                	  <option>-- Province --</option>
-					  <option>Lanao del Norte</option>
-					  <option>Lanao del Sur</option>	  
-					</select>
-					<br></br>
-                	<select>
-                	  <option value="municipal">-- Municipal/City --</option>
-					  <option value="iligan">Iligan Citeeeeeey</option>
-					  <option value="cagayan">Cagayan De Oro City</option>
-					  <option value="manila">Manila City</option>
-					  <option value="dapitan">Dapitan City</option>
-					</select>
-					<br></br>
-             
-					<select>
-					  <option value="municipal">-- Barangay --</option>
-					  <option value="luinab">Luinab</option>
-					  <option value="san_miguel">San Miguel</option>
-					  <option value="Hinaplanon">Hinaplanon</option>
-					  <option value="santiago">Santiago</option>
-					</select>
+                	<div class="form-group row">
+                    <label class="col-md-4 control-label">Province</label>
+                    <br>
+                       <div class="col-md-10">
+                        <select class="form-control" id="barangay1">
+                           <option>Lanao del Norte</option>
+                           <option>2</option>
+                           <option>3</option>
+                           <option>4</option>
+                           </select>                          
+                        </div>
+                  </div>
+                  <div class="form-group row">
+                     <label class="col-md-4 control-label">Municipality</label>
+                     <br>
+                        <div class="col-md-10">
+                           <select class="form-control" id="municipality1">
+                             <option>Iligan City</option>
+                             <option>2</option>
+                             <option>3</option>
+                             <option>4</option>
+                           </select>                          
+                        </div>
+                  </div>
+    			        <div class="form-group row">
+                     <label class="col-md-4 control-label">Barangay</label>
+                     <br>
+                        <div class="col-md-10">
+                           <select class="form-control" id="barangay1">
+                             <option>Hinaplanon</option>
+                             <option>2</option>
+                             <option>3</option>
+                             <option>4</option>
+                           </select>                          
+                        </div>
+                   </div>
+                   <div class="form-group row">
+                       <label class="col-md-7 control-label">Flood Maps</label>
+                       <br>
+                          <div class="col-md-10">
+                             <select class="form-control" id="floodmap1">
+                               <option>25 years</option>
+                               <option>50</option>
+                               <option>100</option>
+                             </select>                          
+                          </div>
+                    </div>     
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary ">
+                             <input type="checkbox" autocomplete="off">Heat Maps
+                        </label>
+                    </div>
 
+                    <br></br>
 
-					<br></br>
-      				<button onclick="toggleHeatmap()">Toggle Heatmap</button>
-      				<br></br>
-      				<button onclick="toggleBoundary()">Toggle Boundary</button>
-      				<br></br>
-      				<button onclick="toggleFloodHazard()">Toggle Flood Hazard</button>
-
-      				<br></br>
-                	<select>
-                	  <option value="returnrate">-- Return Rate --</option>
-					  <option value="iligan">25 years</option>
-					  <option value="cagayan">50 years</option>
-					  <option value="cagayan">100 years</option>	  	  
-					</select>
-					<br></br>
-
-
-      				<br></br>
-    			</div>
-        </div>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary ">
+                              <input type="checkbox" autocomplete="off">Boundaries
+                        </label>
+                    </div>                
+    		       </div>
+         </div>
     </div>
 
      <div class="col-md-9">
