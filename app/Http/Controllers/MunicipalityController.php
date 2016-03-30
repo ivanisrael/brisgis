@@ -10,6 +10,8 @@ use brisgis\Repositories\Contracts\MunicipalityRepositoryInterface;
 use brisgis\Repositories\MunicipalityReposritoryDB;
 use brisgis\Output\Contracts\MunicipalityShowInterface;
 use brisgis\Output\MunicipalityShowText;
+use Illuminate\Support\Facades\Response;
+
 
 class MunicipalityController extends Controller
 {
@@ -75,9 +77,14 @@ class MunicipalityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($province_id)
     {
-        //
+        //$province_id = Input::get('option');
+        $municipalities = new MunicipalityCRUD();
+        $municipalities->getAllMunicipalities($this->repo, $province_id);
+        $municipalities->showAllMunicipalities($this->output);
+        return Response::json($municipalities);
+
     }
 
     /**

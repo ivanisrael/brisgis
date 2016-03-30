@@ -5,13 +5,16 @@ namespace brisgis\Http\Controllers;
 use Illuminate\Http\Request;
 
 use brisgis\Http\Requests;
-use brisgis\Barangay;
-use brisgis\BarangayList;
-use brisgis\BarangayProfile;
+use brisgis\BarangayCRUD;
 use brisgis\Repositories\Contracts\BarangayRepositoryInterface;
 use brisgis\Repositories\BarangayRepositoryDB;
 use brisgis\Output\Contracts\BarangayShowInterface;
 use brisgis\Output\BarangayShowText;
+use brisgis\ProvinceCRUD;
+use brisgis\Repositories\Contracts\ProvinceRepositoryInterface;
+use brisgis\Repositories\ProvinceReposritoryDB;
+use brisgis\Output\Contracts\ProvinceShowInterface;
+use brisgis\Output\ProvinceShowText;
 
 
 class BarangayController extends Controller
@@ -30,11 +33,14 @@ class BarangayController extends Controller
      *
      * @return void
      */
-    public function __construct(BarangayRepositoryInterface $repo, BarangayShowInterface $output)
+    public function __construct(BarangayRepositoryInterface $repo, BarangayShowInterface $output,
+                                ProvinceRepositoryInterface $province_repo, ProvinceShowInterface $provinces_output)
     {
         $this->middleware('auth');
         $this->repo = $repo;
         $this->output = $output;
+        $this->province_repo = $province_repo;
+        $this->provinces_output = $provinces_output;
     }
     /**
      * Display a listing of the resource.
@@ -43,8 +49,13 @@ class BarangayController extends Controller
      */
     public function index()
     {
-        $barangays = new BarangayList($this->repo);
-        return view('pages.barangays.index')->with('barangays',$barangays->show_all($this->output));
+        $barangays = new BarangayCRUD();
+        $barangays->getAllBarangays($this->repo);
+        $provinces = new ProvinceCRUD();
+        $provinces->getAllProvinces($this->province_repo);
+        return view('pages.barangays.index')
+                                ->with('barangays',$barangays->showAllBarangays($this->output))
+                                ->with('provinces',$provinces->showAllProvinces($this->provinces_output));;
     }
 
     /**
@@ -65,11 +76,11 @@ class BarangayController extends Controller
      */
     public function store(Request $request)
     {
-        $inputs = $request->all();
+/*        $inputs = $request->all();
 
         $barangay = Barangay::Create($inputs);
 
-        return redirect()->route('barangays.index');
+        return redirect()->route('barangays.index');*/
     }
 
     /**
@@ -80,8 +91,8 @@ class BarangayController extends Controller
      */
     public function show($id)
     {
-        $barangay = new BarangayProfile($this->repo, $id);
-        return view('pages.barangays.show')->with('barangay',$barangay->show($this->output));
+/*        $barangay = new BarangayProfile($this->repo, $id);
+        return view('pages.barangays.show')->with('barangay',$barangay->show($this->output));*/
     }
 
     /**
@@ -115,8 +126,8 @@ class BarangayController extends Controller
      */
     public function destroy($id)
     {
-        Barangay::destroy($id);
+/*        Barangay::destroy($id);
 
-        return redirect()->route('pages.barangays.index');
+        return redirect()->route('pages.barangays.index');*/
     }
 }
