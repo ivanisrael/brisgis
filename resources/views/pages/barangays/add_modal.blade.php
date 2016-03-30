@@ -32,7 +32,7 @@
                         <div class="form-group row">
                             <label class="col-md-4 control-label">Municipality</label>
                             <div class="col-md-6">
-                                <select class="form-control" id="municipalities1" name="municipalities1" required>
+                                <select class="form-control" id="municipalities1" name="municipalities1">
                                     <option disabled selected>Please Select a Municipality</option>
                                 </select>                          
                             </div>

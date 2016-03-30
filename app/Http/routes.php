@@ -1,5 +1,7 @@
 <?php
 
+use brigis\Municipality;
+
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -40,7 +42,16 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('municipalities', 'MunicipalityController');
 	Route::resource('barangays', 'BarangayController');
 	Route::resource('households', 'HouseholdController');
-	Route::resource('maps', 'MapController');              
+	Route::resource('maps', 'MapController');    
+
+
+ 
+Route::get('/information',['as'=>'information', function()
+{
+    $output = Municipality::all();
+    return $output;
+}]);      
+
 });
 
 

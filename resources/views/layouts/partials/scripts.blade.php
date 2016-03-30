@@ -9,26 +9,25 @@
 
 
 
-<script>
-jQuery(document).ready(function($){
-    $('#province1').change(function(){
-    var selected = $('#province1 option:selected');
-    window.alert(selected.val());
-      $.get("{{ route('municipalities.show', 'selected.val()' )}}", 
-        { option: $(this).val() }, 
-        function(data) {
-          var muminicpalities = $('#municipalities1');
-          municipalities.empty();
+<script type="text/javascript">
  
-          $.each(data, function(index, element) {
-                  municipalities.append("<option value='"+ element.id +"'>" + element.name + "</option>");
-              });
+$(document).ready(function(){ 
+
+    $('#province1').on('change', function(e){
+        console.log(e);
+        var state_id = e.target.value;
+        alert(state_id);
+        $.get("{{route('municipalities.index')}}",
+          { option: $(this).val() }, 
+          function(data) {
+            $('#municipalities1').empty();
         });
     });
   });
 </script>
 
- 
+
+
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the

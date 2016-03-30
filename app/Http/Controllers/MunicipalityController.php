@@ -43,7 +43,7 @@ class MunicipalityController extends Controller
      */
     public function index()
     {
-        //
+        return "municipalities";
     }
 
     /**
@@ -79,7 +79,7 @@ class MunicipalityController extends Controller
      */
     public function show($province_id)
     {
-        //$province_id = Input::get('option');
+        $province_id = Input::get('option');
         $municipalities = new MunicipalityCRUD();
         $municipalities->getAllMunicipalities($this->repo, $province_id);
         $municipalities->showAllMunicipalities($this->output);
