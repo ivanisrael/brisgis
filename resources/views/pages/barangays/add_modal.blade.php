@@ -21,22 +21,19 @@
                         <div class="form-group row">
                             <label class="col-md-4 control-label">Province</label>
                             <div class="col-md-6">
-                                <select class="form-control" id="province1">
-                                    <option>Lanao del Norte</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                <select class="form-control" id="province1" name="province1">
+                                    <option disabled selected>Please Select a Province</option>
+                                    @foreach($provinces as $province)
+                                    <option value="{{$province->id}}">{{$province->name}}</option>
+                                    @endforeach
                                 </select>                          
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-md-4 control-label">Municipality</label>
                             <div class="col-md-6">
-                                <select class="form-control" id="municipality1">
-                                    <option>Iligan City</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                <select class="form-control" id="municipalities1" name="municipalities1" required>
+                                    <option disabled selected>Please Select a Municipality</option>
                                 </select>                          
                             </div>
                         </div>
