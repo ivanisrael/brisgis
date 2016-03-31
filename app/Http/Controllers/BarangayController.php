@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 use brisgis\Http\Requests;
 use brisgis\BarangayCRUD;
 use brisgis\Repositories\Contracts\BarangayRepositoryInterface;
-use brisgis\Repositories\BarangayRepositoryDB;
 use brisgis\Output\Contracts\BarangayShowInterface;
-use brisgis\Output\BarangayShowText;
 use brisgis\ProvinceCRUD;
 use brisgis\Repositories\Contracts\ProvinceRepositoryInterface;
-use brisgis\Repositories\ProvinceReposritoryDB;
 use brisgis\Output\Contracts\ProvinceShowInterface;
-use brisgis\Output\ProvinceShowText;
 
 
 class BarangayController extends Controller
@@ -76,11 +72,9 @@ class BarangayController extends Controller
      */
     public function store(Request $request)
     {
-/*        $inputs = $request->all();
-
-        $barangay = Barangay::Create($inputs);
-
-        return redirect()->route('barangays.index');*/
+        $barangay = new BarangayCRUD();
+        $barangay->createBarangay($this->repo, $request);
+        return redirect()->route('barangays.index');
     }
 
     /**
@@ -91,8 +85,9 @@ class BarangayController extends Controller
      */
     public function show($id)
     {
-/*        $barangay = new BarangayProfile($this->repo, $id);
-        return view('pages.barangays.show')->with('barangay',$barangay->show($this->output));*/
+        $barangay = new BarangayCRUD();
+        $barangay->getBarangay($this->repo, $id);
+        return view('pages.barangays.show')->with('barangay',$barangay->showBarangay($this->output));
     }
 
     /**
@@ -126,8 +121,9 @@ class BarangayController extends Controller
      */
     public function destroy($id)
     {
-/*        Barangay::destroy($id);
+        $barangay = new BarangayCRUD();
+        $barangay->deleteBarangay($this->repo, $id);
 
-        return redirect()->route('pages.barangays.index');*/
+        return redirect()->route('barangays.index');
     }
 }

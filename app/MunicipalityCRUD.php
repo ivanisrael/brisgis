@@ -27,9 +27,9 @@ class MunicipalityCRUD
         $this->municipality = $repo->set($request, $province_id);
     }
 
-    public function updateMunicipality(MunicipalityRepositoryInterface $repo, Request $request, $province_id, $id)
+    public function updateMunicipality(MunicipalityRepositoryInterface $repo, Request $request, $province_id, $municipality_id)
     {
-        $this->municipality = $repo->update($request, $province_id, $id);
+        $this->municipality = $repo->update($request, $province_id, $municipality_id);
     }
 
     public function deleteMunicipality(MunicipalityRepositoryInterface $repo, $province_id, $municipality_id)

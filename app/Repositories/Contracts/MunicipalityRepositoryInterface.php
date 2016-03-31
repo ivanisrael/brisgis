@@ -15,7 +15,7 @@ interface MunicipalityRepositoryInterface
 
     public function set(Request $request, $province_id);
 
-    public function update(Request $request, $province_id, $id);
+    public function update(Request $request, $province_id, $municipality_id);
 
     public function delete($province_id, $municipality_id);
 

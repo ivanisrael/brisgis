@@ -8,17 +8,15 @@
 				<h4 class="modal-title">WARNING!</h4>
 			</div>
 			<div class='row modal-body'>
-				<form method="post" action="{{route('barangays.destroy', '$barangay->id')}}">
-					<input type="hidden" name="user_id" value="<?php ?>">
-					<input type="hidden" name="book_id" value="<?php ?>"/>
-					<input type="hidden" name="author_id" value="<?php ?>"/>
+				<form method="post" action="{{route('barangays.destroy', $barangay->id)}}">
+					<input type="hidden" name="_method" value="DELETE">
 					<div class="col-lg-12 panel">
 						<div class="panel-body">
 							<div class="form-group">
-								<strong><label>Are you sure you want to delete Barangay {{$barangay->name}}? </label></strong>
+								<center><strong><label>Are you sure you want to delete Barangay {{$barangay->name}}? </label></strong></center>
 							</div>
 							<div class="form-group">
-								<input type="submit" name="submit" class="btn btn-danger pull-right" value="Delete Barangay">
+								<input type="submit" class="btn btn-danger pull-right" value="Delete">
 							</div>
 						</div>
 					</div>

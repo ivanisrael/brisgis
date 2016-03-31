@@ -1,6 +1,6 @@
 <!--Start Delete Province-->
 <div id="{{$province->id}}delete-province" class="modal fade" role="dialog">
-	<div class="modal-dialog modal-sm">
+	<div class="modal-dialog modal-md">
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header modal-warning">
