@@ -67,19 +67,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
                              </select>                          
                           </div>
                     </div>     
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary ">
-                             <input type="checkbox" autocomplete="off">Heat Maps
-                        </label>
-                    </div>
-
-                    <br></br>
-
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary ">
-                              <input type="checkbox" autocomplete="off">Boundaries
-                        </label>
-                    </div>                
+                        <div class="col-md-10">
+                            <label class="checkbox">
+                                <input type="checkbox" autocomplete="off">Heat Maps
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" autocomplete="off">Boundaries
+                          </label>
+                     </div>           
     		       </div>
          </div>
     </div>

@@ -13,7 +13,7 @@
                     <li class="{!! Request::is('provinces') ? 'active' : '' !!}"><a href="{{ route('provinces.index') }}"><i class='fa fa-university '></i> <span>Pronvinces</span></a></li>
                     <li class="{!! Request::is('barangays') ? 'active' : '' !!}"><a href="{{ route('barangays.index') }}"><i class='fa fa-legal'></i> <span>Barangays</span></a></li>
                     <li class="{!! Request::is('households') ? 'active' : '' !!}"><a href="{{ route('households.index') }}"><i class='fa fa-home '></i> <span>Households</span></a></li>
-                    <li><a href="# "><i class='fa fa-bar-chart'></i> <span>Reports</span></a></li>
+                    <li class="{!! Request::is('reports') ? 'active' : '' !!}"><a href="{{ route('reports.index') }}"><i class='fa fa-bar-chart'></i> <span>Reports</span></a></li>
                     <li class="{!! Request::is('maps') ? 'active' : '' !!}"><a href="{{ route('maps.index') }}"><i class='fa fa-map-marker'></i> <span>Maps</span></a></li>
                 </ul>
             </div>
