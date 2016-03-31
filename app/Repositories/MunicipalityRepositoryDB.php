@@ -2,12 +2,11 @@
 
 namespace brisgis\Repositories;
 
-
-use DB;
 use brisgis\Municipality;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use brisgis\Repositories\Contracts\MunicipalityRepositoryInterface;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class MunicipalityRepositoryDB
@@ -36,11 +35,11 @@ class MunicipalityRepositoryDB implements MunicipalityRepositoryInterface
         return $municipality->save();
 	}
 
-	public function update(Request $request, $province_id, $id)
+	public function update(Request $request, $province_id, $municipality_id)
 	{
         $updates = $request->all();
         
-        $province = Municipality::find($id);
+        $province = Municipality::find($municipality_id);
         return $province->update($updates);
 
 	}

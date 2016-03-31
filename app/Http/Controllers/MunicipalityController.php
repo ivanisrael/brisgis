@@ -3,14 +3,12 @@
 namespace brisgis\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use brisgis\Http\Requests;
 use brisgis\MunicipalityCRUD;
 use brisgis\Repositories\Contracts\MunicipalityRepositoryInterface;
-use brisgis\Repositories\MunicipalityReposritoryDB;
 use brisgis\Output\Contracts\MunicipalityShowInterface;
-use brisgis\Output\MunicipalityShowText;
-use Illuminate\Support\Facades\Response;
+use brisgis\Output\MunicipalityShowJSON;
+use Illuminate\Support\Facades\Input;
 
 
 class MunicipalityController extends Controller
@@ -43,7 +41,7 @@ class MunicipalityController extends Controller
      */
     public function index()
     {
-        return "municipalities";
+        //
     }
 
     /**
@@ -131,6 +129,15 @@ class MunicipalityController extends Controller
         $municipality = new MunicipalityCRUD();
         $municipality->deleteMunicipality($this->repo, $province_id, $municipality_id);
         return redirect()->route('provinces.show', $province_id);
+
+    }
+
+    public function dropdown()
+    {
+        $province_id = Input::get('option');
+        $municipalities = new MunicipalityCRUD();
+        $municipalities->getAllMunicipalities($this->repo, $province_id);
+        return $municipalities->showAllMunicipalities(new MunicipalityShowJSON ());
 
     }
 }

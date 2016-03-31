@@ -1,7 +1,5 @@
 <?php
 
-use brigis\Municipality;
-
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -34,7 +32,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('users', 'UserController');
     Route::resource('admins', 'AdminController');
     Route::resource('provinces', 'ProvinceController');
-   // Route::get('municipalities/remove', 'MunicipalityController@remove');
+    Route::get('/municipalities/dropdown',[
+    'as' => 'municipalities.dropdown',
+    'uses' => 'MunicipalityController@dropdown'
+    ]);
     Route::delete('/municipalities/remove/{province_id}/{municipality_id}',[
     'as' => 'municipalities.remove',
     'uses' => 'MunicipalityController@remove'
@@ -43,15 +44,6 @@ Route::group(['middleware' => 'web'], function () {
 	Route::resource('barangays', 'BarangayController');
 	Route::resource('households', 'HouseholdController');
 	Route::resource('maps', 'MapController');    
-
-
- 
-Route::get('/information',['as'=>'information', function()
-{
-    $output = Municipality::all();
-    return $output;
-}]);      
-
 });
 
 

@@ -21,7 +21,7 @@ class BarangayCRUD
 		return $i->show_all($this->barangay);
 	}
 
-	function getBarangay(BarangayRepositoryInterface $repo, $id)
+	public function getBarangay(BarangayRepositoryInterface $repo, $id)
     {
         $this->barangay = $repo->get($id);
     }
