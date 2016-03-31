@@ -7,6 +7,11 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
 
+<script src="{{ asset ('/plugins/morris/morris.min.js') }}"></script>
+
+<script src="{{ asset ('/plugins/morris/morris-data.js') }}"></script>
+
+
 
 
 <script>

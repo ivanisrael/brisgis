@@ -5,7 +5,7 @@ namespace brisgis\Http\Controllers;
 use brisgis\Http\Requests;
 use Illuminate\Http\Request;
 
-class MapController extends Controller
+class ReportController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,6 +24,6 @@ class MapController extends Controller
      */
     public function index()
     {
-        return view('pages.maps.index');
+        return view('pages.reports.index');
     }
 }
