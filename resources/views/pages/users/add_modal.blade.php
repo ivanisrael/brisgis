@@ -8,7 +8,7 @@
                 <h4 class="modal-title">Authorized User Information</h4>
             </div>
             <div class='row modal-body'>
-                <form class="form-horizontal" method="post" action="{{route('admins.store')}}">
+                <form class="form-horizontal" method="post" action="#">
                     {!! csrf_field() !!}
 
                     <div class="panel-body">
