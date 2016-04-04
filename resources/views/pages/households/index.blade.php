@@ -33,14 +33,14 @@
                     </thead>
                     <tbody>
 
-                    @for ($i = 1; $i <= 5; $i++)
+                    @foreach ($households as $household)
                       <tr>
-                        <td>{{ $i }}</td>
-                        <td><a href="#">Household {{ $i }}</a></td>
-                        <td>Gumamela</td>
-                        <td>1/13/1995</td>
-                        <td>Residential</td>
-                        <td>{{ $i }}23 m^2</td>
+                        <td>{{$household->id}}</td>
+                        <td><a href="#">{{$household->name}}</a></td>
+                        <td>{{$household->purok_name}}</td>
+                        <td>{{$household->year_constructed}}</td>
+                        <td>{{$household->usage}}</td>
+                        <td>{{$household->area}}</td>
                         <td>
                         	<center>
                         		<button type="button" class="btn btn-link">
@@ -49,7 +49,7 @@
                         	</center>
                         </td>
                       </tr>
-                     @endfor
+                     @endforeach
 
                     </tbody>
                     <tfoot>
