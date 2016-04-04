@@ -17,7 +17,7 @@ class CreateFamilyMemberTable extends Migration
             $table->integer('resident_id')->unsigned();
             $table->string('relation_head');
 
-            $table->foreign('family_id')->references('id')->on('familys')->onDelete('cascade');
+            $table->foreign('family_id')->references('id')->on('families')->onDelete('cascade');
             $table->foreign('resident_id')->references('id')->on('residents')->onDelete('cascade');
             $table->timestamps();
         });

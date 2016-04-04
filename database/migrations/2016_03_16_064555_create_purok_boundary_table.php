@@ -12,7 +12,7 @@ class CreatePurokBoundaryTable extends Migration
      */
     public function up()
     {
-        Schema::create('purok_boundarys', function (Blueprint $table) {
+        Schema::create('purok_boundaries', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('purok_id')->unsigned();
 

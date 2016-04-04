@@ -12,7 +12,7 @@ class AddShapeToPurokBoundarys extends Migration
      */
     public function up()
     {
-        DB::statement('ALTER TABLE purok_boundarys ADD COLUMN shape GEOMETRY;');
+        DB::statement('ALTER TABLE purok_boundaries ADD COLUMN shape GEOMETRY;');
     }
 
     /**
@@ -22,6 +22,6 @@ class AddShapeToPurokBoundarys extends Migration
      */
     public function down()
     {
-        DB::statement('ALTER TABLE purok_boundarys DROP COLUMN shape RESTRICT;');
+        DB::statement('ALTER TABLE purok_boundaries DROP COLUMN shape RESTRICT;');
     }
 }

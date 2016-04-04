@@ -16,6 +16,11 @@ class CreatePurokTable extends Migration
             $table->increments('id');
             $table->integer('barangay_id')->unsigned();
             $table->string('name');
+            $table->string('description');
+            $table->string('president');
+            $table->integer('population');
+
+
 
             $table->foreign('barangay_id')->references('id')->on('barangays')->onDelete('cascade');
             $table->timestamps();

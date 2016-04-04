@@ -18,9 +18,9 @@ class CreateHouseholdTable extends Migration
             $table->string('name');
             $table->date('year_constructed');
             $table->integer('net_value');
-            $table->string('usage');
+            $table->string('household_usage');
             $table->string('structure');
-            $table->decimal('area', 5, 2);
+            $table->double('area');
             $table->integer('no_stories');
             $table->string('holding');
             $table->boolean('if_flooded');
@@ -28,8 +28,8 @@ class CreateHouseholdTable extends Migration
             $table->string('flood_height');
             $table->string('building_height');
             $table->date('date_entry');
-            $table->double('longitude', 15, 8);
-            $table->double('latitude', 15, 8);     
+            $table->double('longitude');
+            $table->double('latitude');     
 
             $table->foreign('purok_id')->references('id')->on('puroks')->onDelete('cascade');
             $table->timestamps();

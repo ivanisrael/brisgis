@@ -16,6 +16,7 @@ class CreateFloodMapTable extends Migration
             $table->increments('id');
             $table->integer('barangay_id')->unsigned();
             $table->integer('level');
+            $table->integer('return_period');
 
             $table->foreign('barangay_id')->references('id')->on('barangays')->onDelete('cascade');
             $table->timestamps();
