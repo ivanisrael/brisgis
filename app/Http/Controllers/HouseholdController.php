@@ -19,16 +19,28 @@ class HouseholdController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $households = [
-            'id' => '1',
+    {    
+/*        $households = (object) array (
+            '0' => array 
+            ('id' => '1',
             'purok_name' => 'Hinaplanon',
             'household_name' => 'Hernaez Resident',
             'year_constructed' => '1/13/1995',
             'usage' => 'Residential',
-            'area' => '25 m sq.',
-        ];
+            'area' => '25 m sq.'),
+            '1' => array 
+            ('id' => '1',
+            'purok_name' => 'Hinaplanon',
+            'household_name' => 'Hernaez Resident',
+            'year_constructed' => '1/13/1995',
+            'usage' => 'Residential',
+            'area' => '25 m sq.')
+        );*/
+
+$object = (object) ['property' => 'Here we go'];
+
     
+        dd($object);
         return view('pages.households.index')->with('households', $households);
     }
 
