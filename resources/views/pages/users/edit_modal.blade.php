@@ -8,7 +8,7 @@
                 <h4 class="modal-title">Edit User Information</h4>
             </div>
             <div class='row modal-body'>
-                <form class="form-horizontal" method="post" action="{{route('admins.update', $user->id)}}">
+                <form class="form-horizontal" method="post" action="#">
                     {!! csrf_field() !!}
 
                     <div class="panel-body" style="text-align:right">
