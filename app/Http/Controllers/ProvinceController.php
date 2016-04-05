@@ -57,7 +57,7 @@ class ProvinceController extends Controller
     {
         $provinces = new ProvinceCRUD();
         $provinces->getAllProvinces($this->repo);
-        dd($provinces->showAllProvinces($this->output));
+
         //return view('pages.provinces.index')->with('provinces',$provinces->showAllProvinces($this->output));
     }
 
