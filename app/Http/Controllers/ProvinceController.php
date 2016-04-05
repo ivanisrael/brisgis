@@ -6,14 +6,10 @@ use Illuminate\Http\Request;
 use brisgis\Http\Requests;
 use brisgis\ProvinceCRUD;
 use brisgis\Repositories\Contracts\ProvinceRepositoryInterface;
-use brisgis\Repositories\ProvinceReposritoryDB;
 use brisgis\Output\Contracts\ProvinceShowInterface;
-use brisgis\Output\ProvinceShowText;
 use brisgis\MunicipalityCRUD;
 use brisgis\Repositories\Contracts\MunicipalityRepositoryInterface;
-use brisgis\Repositories\MunicipalityReposritoryDB;
 use brisgis\Output\Contracts\MunicipalityShowInterface;
-use brisgis\Output\MunicipalityShowText;
 
 
 class ProvinceController extends Controller
@@ -61,7 +57,7 @@ class ProvinceController extends Controller
     {
         $provinces = new ProvinceCRUD();
         $provinces->getAllProvinces($this->repo);
-        return view('pages.provinces.index')->with('provinces',$provinces->showAllProvinces($this->output));
+        //return view('pages.provinces.index')->with('provinces',$provinces->showAllProvinces($this->output));
     }
 
     /**

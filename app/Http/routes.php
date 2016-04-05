@@ -26,13 +26,63 @@
 */
 
 Route::group(['middleware' => 'web'], function () {
+
+    Route::get('/',[
+    'as' => 'home.indexUI',
+    'uses' => 'PageController@homeIndex'
+    ]);
+    
+    Route::get('/homeUI',[
+    'as' => 'home.indexUI',
+    'uses' => 'PageController@homeIndex'
+    ]);
+
+    Route::get('/provincesUI',[
+    'as' => 'provinces.indexUI',
+    'uses' => 'PageController@provinceIndex'
+    ]);
+
+    Route::get('/barangaysUI',[
+    'as' => 'barangays.indexUI',
+    'uses' => 'PageController@barangayIndex'
+    ]);
+
+    Route::get('/householdsUI',[
+    'as' => 'households.indexUI',
+    'uses' => 'PageController@householdIndex'
+    ]);
+
+    Route::get('/mapspopuUI',[
+    'as' => 'mapspopu.indexUI',
+    'uses' => 'PageController@mappopuIndex'
+    ]);
+
+    Route::get('/reportsUI',[
+    'as' => 'reports.indexUI',
+    'uses' => 'PageController@reportIndex'
+    ]);
+
+    Route::get('/usersUI',[
+    'as' => 'users.indexUI',
+    'uses' => 'PageController@userIndex'
+    ]);
+
+    Route::get('/mapsfloodUI',[
+    'as' => 'mapsflood.indexUI',
+    'uses' => 'PageController@mapfloodIndex'
+    ]);
+
+
+
     Route::auth();
-    Route::get('/home', 'HomeController@index');
-    Route::get('/', 'HomeController@index');
+//    Route::get('/home', 'HomeController@index');
+//    Route::get('/', 'HomeController@index');
     Route::resource('users', 'UserController');
-    Route::resource('admins', 'AdminController');
     Route::resource('provinces', 'ProvinceController');
-   // Route::get('municipalities/remove', 'MunicipalityController@remove');
+    Route::get('/municipalities/dropdown',[
+    'as' => 'municipalities.dropdown',
+    'uses' => 'MunicipalityController@dropdown'
+    ]);
     Route::delete('/municipalities/remove/{province_id}/{municipality_id}',[
     'as' => 'municipalities.remove',
     'uses' => 'MunicipalityController@remove'
@@ -40,8 +90,14 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('municipalities', 'MunicipalityController');
 	Route::resource('barangays', 'BarangayController');
 	Route::resource('households', 'HouseholdController');
+
 	Route::resource('maps', 'MapController'); 
     Route::resource('reports', 'ReportController');              
+
+
+
+
+
 });
 
 
