@@ -41,11 +41,11 @@
                 <tr>
                   <td>{{$barangay->id}}</td>
                   <td><a href="{{route('barangays.show', $barangay->id)}}"> {{$barangay->name}} </a></td>
-                  <td>Prov</td>
-                  <td>Mun</td>
+                  <td>{{$barangay->province_name}}</td>
+                  <td>{{$barangay->municipality_name}}</td>
                   <td>
                     <center>
-                      <a href="#" data-toggle="modal" data-target="#" >
+                      <a href="#" data-toggle="modal" data-target="#{{$barangay->id}}edit-barangay" >
                         <span class="glyphicon glyphicon-edit text-black" aria-hidden="true"></span>
                       </a>
                     </center>
@@ -59,6 +59,7 @@
                   </td>
                 </tr>
 
+              @include('pages.barangays.edit_modal')
               @include('pages.barangays.delete_modal')
 
               @endforeach
@@ -82,4 +83,40 @@
 
   </div>
 
+@endsection
+
+@section('page-script')
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+    $('#province1').on('change', function(){
+        $.get("{{route('municipalities.dropdown')}}",
+          { option: $(this).val() }, 
+          function(data) {
+            var municipalities = $('#municipalities1');
+            municipalities.empty();
+          $.each(data, function(index, element) {
+                  municipalities.append("<option value='"+ index +"'>" + element + "</option>");
+          });
+        });
+    });
+  });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+    $('#province2').on('change', function(){
+        $.get("{{route('municipalities.dropdown')}}",
+          { option: $(this).val() }, 
+          function(data) {
+            var municipalities = $('#municipalities2');
+            municipalities.empty();
+          $.each(data, function(index, element) {
+            municipalities.append("<option value='"+ index +"'>" + element + "</option>");
+          
+          });
+        });
+    });
+  });
+</script>
 @endsection
