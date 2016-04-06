@@ -48,6 +48,10 @@ class PageController extends Controller
     	return view('pages.home.index');
     }
 
+    public function municipalityIndex()
+    {
+       return view('pages.provinces.show');
+    }
 
 
 
