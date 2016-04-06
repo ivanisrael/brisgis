@@ -9,28 +9,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('layouts.partials.htmlheader')
 @show
 
-<body>
-    <div id="wrapper">
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    @include('layouts.partials.mainheader')
+<body class="skin-blue sidebar-mini wysihtml5-supported">
+    <div class="wrapper">
 
-    @include('layouts.partials.sidebar')
-    </nav>
+        @include('layouts.partials.mainheader')
 
+        @include('layouts.partials.sidebar')
 
-    <!-- Content Wrapper. Contains page content -->
-    <div id="page-wrapper">
-        <div class="container-fluid">
-        <!-- Main content -->
-        <section class="content">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 858px;">
             <!-- Your Page Content Here -->
             @yield('main-content')
-        </section><!-- /.content -->
         </div><!-- /.content-wrapper -->
+    
+        @include('layouts.partials.footer')
     </div><!-- ./wrapper -->
-            @include('layouts.partials.footer')
-    </div>
 @section('scripts')
     @include('layouts.partials.scripts')
     @yield('page-script')
