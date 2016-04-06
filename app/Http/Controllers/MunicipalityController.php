@@ -29,7 +29,7 @@ class MunicipalityController extends Controller
      */
     public function __construct(MunicipalityRepositoryInterface $repo, MunicipalityShowInterface $output)
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
         $this->repo = $repo;
         $this->output = $output;
     }

@@ -41,7 +41,7 @@ class ProvinceController extends Controller
                                 MunicipalityRepositoryInterface $municipality_repo, 
                                 MunicipalityShowInterface $municipality_output)
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
         $this->repo = $repo;
         $this->output = $output;
         $this->municipality_repo = $municipality_repo;
@@ -97,9 +97,12 @@ class ProvinceController extends Controller
         $province->getProvince($this->repo, $id);
         $municipalities = new MunicipalityCRUD();
         $municipalities->getAllMunicipalities($this->municipality_repo, $id);
-        return view('pages.provinces.show')
+        dd($province->showProvince($this->output) , $municipalities->showAllMunicipalities($this->municipality_output));
+        dd();
+       /* return view('pages.provinces.show')
                         ->with('province',$province->showProvince($this->output))
                         ->with('municipalities', $municipalities->showAllMunicipalities($this->municipality_output));
+        */
     }
 
     /**
