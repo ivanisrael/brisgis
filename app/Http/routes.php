@@ -72,6 +72,10 @@ Route::group(['middleware' => 'web'], function () {
     'uses' => 'PageController@mapfloodIndex'
     ]);
 
+    Route::get('/municipalityUI',[
+    'as' => 'provinces.cityUI',
+    'uses' => 'PageController@municipalityIndex'
+    ]);
 
 
     Route::auth();
