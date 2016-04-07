@@ -77,6 +77,10 @@ Route::group(['middleware' => 'web'], function () {
     'uses' => 'PageController@municipalityIndex'
     ]);
 
+    Route::get('/puroksUI',[
+    'as' => 'barangays.purokUI',
+    'uses' => 'PageController@purokIndex'
+    ]);
 
     Route::auth();
 //    Route::get('/home', 'HomeController@index');

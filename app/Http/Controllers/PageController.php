@@ -53,6 +53,12 @@ class PageController extends Controller
        return view('pages.provinces.show');
     }
 
+    public function purokIndex()
+    {
+       return view('pages.barangays.show');
+    }
+
+
 
 
 }
