@@ -56,10 +56,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                                         </select>                          
                                     </div>
                                  </div>
-                              
-                                      <div class="col-sm-4"></div>
-                                      <div class="col-sm-4"></div>
-                                      <div class="col-sm-4">
+                                      <div class="col-sm-4 col-sm-offset-8">
                                           <button  onclick="enable()" type="button" class="btn btn-primary btn-sm>">GO</button>
                                       </div>
                                        

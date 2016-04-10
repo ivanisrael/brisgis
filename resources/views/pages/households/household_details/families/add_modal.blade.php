@@ -1,5 +1,5 @@
 <!--Start Add Family-->
-<div id="add-detail" class="modal fade" role="dialog">
+<div id="add-family" class="modal fade" role="dialog">
     <div class="modal-dialog modal-md">
         <!-- Modal content-->
         <div class="modal-content">
