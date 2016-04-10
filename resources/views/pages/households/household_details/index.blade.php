@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@include('pages.barangays.add_modal')
+@include('pages.households.household_details.families.add_modal')
 
 @section('main-content')
   <section class="content-header">
           <h1>
-            Barangay
+            Household Details
           </h1>      
         </section>
         <!-- Main content -->
@@ -15,7 +15,7 @@
         		<div class="box">
             		<div class="box-header">
             			<div class="col-xs-3">   
-                      		<h3 class="box-title">Options</h3>
+                      		<h3 class="box-title">Household Info</h3>
                         </div>
             		</div>
                			<div class="box-body">
@@ -56,12 +56,12 @@
               <div class="box">
                 <div class="box-header">
                     <div class="col-xs-3">   
-                      <h3 class="box-title">List of Barangays</h3>
+                      <h3 class="box-title">List of Families</h3>
                     </div>
                     <div class="col-xs-0">
-                      <a data-toggle="modal" data-target="#add-barangay" style="float: right;" class="btn btn-primary btn-sm">
+                      <a data-toggle="modal" data-target="#add-detail" style="float: right;" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
-                          Add Barangay
+                          Add Family
                       </a>
                     </div>                  
                 </div><!-- /.box-header -->
@@ -70,7 +70,9 @@
                      <thead>
                        <tr>
                           <th>ID</th>
-                          <th>Name</th>
+                          <th>Family Identifier</th>
+                          <th>Monthly Income</th>
+                          <th>4ps</th>
                           <th><center>Edit</center></th>
                           <th><center>Delete</center></th>
                       </tr>
@@ -78,29 +80,33 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td><a href="{{route('barangays.purokUI')}}">Hinaplanon</a></td>
+                        <td><a href="#">Hernaez Family</a></td>
+                        <td>20000s</td>
+                        <td>4ps</td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#edit-barangay" >
+                              <a href="#" data-toggle="modal" data-target="#edit-detail" >
                                 <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
                               </a>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#delete-barangay" >
+                              <a href="#" data-toggle="modal" data-target="#delete-detail" >
                                 <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
                               </a>
                             </center>
                         </td>
                       </tr>                               
-                    @include('pages.barangays.delete_modal')
-                    @include('pages.barangays.edit_modal')
+                    @include('pages.households.household_details.families.delete_modal')
+                    @include('pages.households.household_details.families.edit_modal')
                     </tbody>
                     <tfoot>
                       <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Family Identifier</th>
+                        <th>Monthly Income</th>
+                        <th>4ps</th>
                         <th><center>Edit</center></th>
                         <th><center>Delete</center></th>
                       </tr>

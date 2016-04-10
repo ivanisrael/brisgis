@@ -77,6 +77,15 @@ Route::group(['middleware' => 'web'], function () {
     'uses' => 'PageController@municipalityIndex'
     ]);
 
+    Route::get('/puroksUI',[
+    'as' => 'barangays.purokUI',
+    'uses' => 'PageController@purokIndex'
+    ]);
+
+    Route::get('/household_detailsUI',[
+    'as' => 'households.household_details.household_detailUI',
+    'uses' => 'PageController@household_detailIndex'
+    ]);
 
     Route::auth();
 //    Route::get('/home', 'HomeController@index');
