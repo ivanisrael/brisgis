@@ -20,7 +20,16 @@ class HouseholdController extends Controller
      */
     public function index()
     {
-        return view('pages.households.index');
+        $households = [
+            'id' => '1',
+            'purok_name' => 'Hinaplanon',
+            'household_name' => 'Hernaez Resident',
+            'year_constructed' => '1/13/1995',
+            'usage' => 'Residential',
+            'area' => '25 m sq.',
+        ];
+    
+        return view('pages.households.index')->with('households', $households);
     }
 
     /**
