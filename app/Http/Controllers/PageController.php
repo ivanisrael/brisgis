@@ -58,7 +58,10 @@ class PageController extends Controller
        return view('pages.barangays.show');
     }
 
-
+    public function household_detailIndex()
+    {
+        return view('pages.households.household_details.index');
+    }
 
 
 }

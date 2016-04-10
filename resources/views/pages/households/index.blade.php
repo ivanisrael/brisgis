@@ -41,7 +41,7 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td><a href="#">Hernaez Family</a></td>
+                        <td><a href="{{route('households.household_details.household_detailUI')}}">Hernaez Family</a></td>
                         <td>Residential</td>
                         <td>wood</td>
                         <td>40</td>
