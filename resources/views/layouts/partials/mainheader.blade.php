@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>B</b>RIS</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>BRIS</b>-GIS</span>
     </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -19,13 +19,13 @@
             <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-user"></i>
-                    <span class="hidden-xs">Alexander Pierce</span>
+                    <span class="hidden-xs">Admin</span>
                 </a>
                 <ul class="dropdown-menu">
                     <!-- User image -->
                     <li class="user-header">
-                        <p> Alexander Pierce 
-                        <br> Web Developer </p>
+                        <p> BRIS-GIS
+                        <br> Admin </p>
                     </li>
                     <!-- Menu Footer-->
                     <li class="user-footer">
