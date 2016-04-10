@@ -1,5 +1,5 @@
-<!--Start Delete Family-->
-<div id="delete-family" class="modal fade" role="dialog">  
+<!--Start Delete Household Details-->
+<div id="delete-detail" class="modal fade" role="dialog">  
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
         <div class="modal-content">
@@ -10,7 +10,7 @@
               <div class='row modal-body' style="text-align:right">
                   <form method="post" action="">    
           					  <div class="form-group">
-          								<center><strong><label>Are you sure you want to delete Family? </label></strong></center>
+          								<center><strong><label>Are you sure you want to delete Household Detail? </label></strong></center>
           						</div>
 				          </form> 
               </div>
@@ -22,4 +22,4 @@
        <!-- End Modal content-->
     </div>
 </div>
-<!-- End Delete Family-->
+<!-- End Delete Household Details-->
