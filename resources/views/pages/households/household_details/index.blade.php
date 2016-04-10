@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @include('pages.households.household_details.families.add_modal')
-<!-- @include('pages.households.household_details.delete_modal') -->
-
 @section('main-content')
   <section class="content-header">
           <h1>
-            Household Details
+            <a href="{{ route('households.indexUI') }}">
+                  <span class="fa fa-reply"></span>
+              </a> Household Details
           </h1>      
         </section>
         <!-- Main content -->
@@ -36,7 +36,10 @@
                                           Map
                                        </a>
                                   </div> 
-                             </div>    
+                             </div>
+                             @include('pages.households.household_details.delete_modal')
+                             @include('pages.households.household_details.preview_modal')
+                             @include('pages.households.household_details.edit_modal')
                         </div>
                  			  <div class="form-group row">
                      				    <label class="col-md-5">Household Name:</label>
