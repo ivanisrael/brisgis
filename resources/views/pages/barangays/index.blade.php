@@ -11,7 +11,6 @@
         <!-- Main content -->
         <section class="content">
           <div class="row">
-
           	<div class="col-md-3">
         		<div class="box">
             		<div class="box-header">
@@ -24,11 +23,10 @@
                    				 <label class="col-md-4 control-label">Province</label>
                    				 <br>
                        				<div class="col-md-12">
-	                      				  <select class="form-control" id="barangay1">
+	                      				  <select class="form-control" id="barangay1" style"">
+                                     <option >Province</option>
+                                     <option disabled>────────────────────</option>
 	                           				 <option>Lanao del Norte</option>
-						                     <option>2</option>
-						                     <option>3</option>
-						                     <option>4</option>
 	                           			 </select>                          
                         			</div>
                  		     </div>
@@ -37,10 +35,9 @@
                      			 <br>
                         			<div class="col-md-12">
                            				 <select class="form-control" id="municipality1">
+                                     <option>Municipality</option>
+                                     <option disabled>────────────────────</option>
 				                             <option>Iligan City</option>
-				                             <option>2</option>
-				                             <option>3</option>
-				                             <option>4</option>
                            				 </select>                          
                         			</div>
                   			 </div>
@@ -81,7 +78,7 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>Hinaplanon</td>
+                        <td><a href="{{route('barangays.purokUI')}}">Hinaplanon</a></td>
                         <td>
                             <center>
                               <a href="#" data-toggle="modal" data-target="#edit-barangay" >
