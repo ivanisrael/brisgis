@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Province Information</h4>
+                <h4 class="modal-title">Family Information</h4>
             </div>
             <div class='row modal-body'>
                 <form class="form-horizontal" method="post" action="">

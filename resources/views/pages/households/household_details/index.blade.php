@@ -43,35 +43,35 @@
                         </div>
                  			  <div class="form-group row">
                      				    <label class="col-md-5">Household Name:</label>
-                                <div class="col-md-6"><u>Hernaez Family</u></div>
+                                <div class="col-md-6">Hernaez Family</div>
                  		    </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Year Constructed:</label>
-                                <div class="col-md-6"><u>1990-12-12</u></div>
+                                <div class="col-md-6">1990-12-12</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Usage:</label>
-                                <div class="col-md-6"><u>Residential</u></div>
+                                <div class="col-md-6">Residential</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Net Value:</label>
-                                <div class="col-md-6"><u>10000</u></div>
+                                <div class="col-md-6">10000</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Structure:</label>
-                                <div class="col-md-6"><u>wood</u></div>
+                                <div class="col-md-6">wood</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Area:</label>
-                                <div class="col-md-6"><u>40</u></div>
+                                <div class="col-md-6">40</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">No. of Stories:</label>
-                                <div class="col-md-6"><u>0</u></div>
+                                <div class="col-md-6">0</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Holding:</label>
-                                <div class="col-md-6"><u>owned</u></div>
+                                <div class="col-md-6">owned</div>
                         </div>
                         <div class="box-header">
                             <div class="col-xs-8">   
@@ -80,23 +80,23 @@
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Flooded:</label>
-                                <div class="col-md-6"><u>Yes</u></div>
+                                <div class="col-md-6">Yes</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Date Flooded:</label>
-                                <div class="col-md-6"><u>2011-12-12</u></div>
+                                <div class="col-md-6">2011-12-12</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Flood Height:</label>
-                                <div class="col-md-6"><u>8 ft.</u></div>
+                                <div class="col-md-6">8 ft.</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Building Height:</label>
-                                <div class="col-md-6"><u>200m</u></div>
+                                <div class="col-md-6">200m</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Date Entry:</label>
-                                <div class="col-md-6"><u>2007-12-12</u></div>
+                                <div class="col-md-6">2007-12-12</div>
                         </div>
                         <div class="box-header">
                             <div class="col-xs-10">   
@@ -105,11 +105,11 @@
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Name:</label>
-                                <div class="col-md-6"><u>Ivan</u></div>
+                                <div class="col-md-6">Ivan</div>
                         </div>
                         <div class="form-group row">
                                 <label class="col-md-5">Contact Number:</label>
-                                <div class="col-md-6"><u>09313131345</u></div>
+                                <div class="col-md-6">09313131345</div>
                         </div>
                  		   
               			</div>
