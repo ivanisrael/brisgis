@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@include('pages.households.household_details.families.add_modal')
+@include('pages.households.families.add_modal')
 @section('main-content')
   <section class="content-header">
           <h1>
@@ -22,20 +22,18 @@
                			<div class="box-body">
                        <div class="form-group row">
                              <div class="col-xs-10 col-xs-offset-2">  
-                                  <div class="btn-group">
-                                       <a data-toggle="modal" data-target="#edit-detail" class="btn btn-primary btn-sm">
-                                          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
-                                          Edit
-                                       </a>
-                                       <a data-toggle="modal" data-target="#delete-detail" class="btn btn-danger btn-sm">
-                                          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
-                                          Delete
-                                       </a>
-                                       <a data-toggle="modal" data-target="#map-detail" class="btn btn-success btn-sm">
-                                          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 
-                                          Map
-                                       </a>
-                                  </div> 
+                                  <a data-toggle="modal" data-target="#edit-detail" class="btn btn-primary btn-sm">
+                                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
+                                     Edit
+                                  </a>
+                                  <a data-toggle="modal" data-target="#delete-detail" class="btn btn-danger btn-sm">
+                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
+                                     Delete
+                                  </a>
+                                  <a data-toggle="modal" data-target="#map-detail" class="btn btn-success btn-sm">
+                                      <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 
+                                      Map
+                                  </a>  
                              </div>
                              @include('pages.households.household_details.delete_modal')
                              @include('pages.households.household_details.preview_modal')
@@ -117,7 +115,7 @@
     		</div>	
 
 
-            <div class="col-xs-8">
+            <div class="col-md-8">
               <div class="box">
                 <div class="box-header">
                     <div class="col-xs-3">   
@@ -145,7 +143,7 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td><a href="#">Hernaez Family</a></td>
+                        <td><a href="{{route('households.family_profiles.family_profileUI')}}">Hernaez Family</a></td>
                         <td>20000s</td>
                         <td>4ps</td>
                         <td>
@@ -163,8 +161,8 @@
                             </center>
                         </td>
                       </tr>                               
-                    @include('pages.households.household_details.families.delete_modal')
-                    @include('pages.households.household_details.families.edit_modal')
+                    @include('pages.households.families.delete_modal')
+                    @include('pages.households.families.edit_modal')
                     </tbody>
                     <tfoot>
                       <tr>

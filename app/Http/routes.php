@@ -87,6 +87,22 @@ Route::group(['middleware' => 'web'], function () {
     'uses' => 'PageController@household_detailIndex'
     ]);
 
+    Route::get('/family_profileUI',[
+    'as' => 'households.family_profiles.family_profileUI',
+    'uses' => 'PageController@family_profileIndex'
+    ]);
+
+    Route::get('/resident_profileUI',[
+    'as' => 'households.resident_profiles.resident_profileUI',
+    'uses' => 'PageController@resident_profileIndex'
+    ]);
+
+     Route::get('/household_createUI',[
+    'as' => 'households.createUI',
+    'uses' => 'PageController@householdCreate'
+    ]);
+
+
     Route::auth();
 //    Route::get('/home', 'HomeController@index');
 //    Route::get('/', 'HomeController@index');

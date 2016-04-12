@@ -18,7 +18,7 @@
                       <h3 class="box-title">List of Households</h3>
                     </div>
                     <div class="col-xs-0">
-                      <a data-toggle="modal" data-target="#add-household" class="btn btn-primary btn-sm pull-right">
+                      <a class="btn btn-primary btn-sm pull-right" href="{{route('households.createUI')}}"> 
                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
                           Add Household
                       </a>
@@ -91,15 +91,15 @@
     <!-- page script -->
     <script>
       $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
+        $("#example1").DataTable({
+           "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+
+          });
       });
     </script>
 @endsection
