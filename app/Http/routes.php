@@ -87,6 +87,11 @@ Route::group(['middleware' => 'web'], function () {
     'uses' => 'PageController@household_detailIndex'
     ]);
 
+    Route::get('/household_createUI',[
+    'as' => 'households.createUI',
+    'uses' => 'PageController@householdCreate'
+    ]);
+
     Route::auth();
 //    Route::get('/home', 'HomeController@index');
 //    Route::get('/', 'HomeController@index');
