@@ -63,5 +63,8 @@ class PageController extends Controller
         return view('pages.households.household_details.index');
     }
 
-
+    public function householdCreate()
+    {
+        return view('pages.households.create');
+    }
 }
