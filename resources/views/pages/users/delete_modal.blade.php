@@ -1,5 +1,5 @@
 <!--Start Delete Province-->
-<div id="delete-province" class="modal fade" role="dialog">  
+<div id="delete-user" class="modal fade" role="dialog">  
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
         <div class="modal-content">
@@ -10,7 +10,7 @@
               <div class='row modal-body' style="text-align:right">
                   <form method="post" action="">    
           					  <div class="form-group">
-          								<center><strong><label>Are you sure you want to delete Province Lanao del Norte?</label></strong></center>
+          								<center><strong><label>Are you sure you want to delete User? </label></strong></center>
           						</div>
 				          </form> 
               </div>

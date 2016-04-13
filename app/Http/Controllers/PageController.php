@@ -63,5 +63,22 @@ class PageController extends Controller
         return view('pages.households.household_details.index');
     }
 
+    public function family_profileIndex()
+    {
+        return view('pages.households.family_profiles.index');
+    }
+
+    public function resident_profileIndex()
+    {
+        return view('pages.households.resident_profiles.index');
+    }
+
+    
+    public function householdCreate()
+    {
+        return view('pages.households.create');
+    }
+
+
 
 }
