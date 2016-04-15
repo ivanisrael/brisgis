@@ -7,9 +7,9 @@
                <div class="col-md-4">
                      <div class="box">
                         <div class="box-header">
-                        	<div class="col-xs-4">   
-                     			 <h3 class="box-title">Category</h3>
-                  			</div>
+                          <div class="col-xs-4">   
+                           <h3 class="box-title">Category</h3>
+                        </div>
                         </div>
                              <div class="box-body">
 
@@ -17,7 +17,7 @@
                                     <label class="col-md-4 control-label">Province</label>
                                     <div class="col-md-7">
                                         <select class="form-control" id="province1">
-                                       			<option>Lanao del Norte</option>
+                                            <option>Lanao del Norte</option>
                                         </select>                          
                                     </div>
                                  </div>
@@ -47,9 +47,9 @@
 
                      <div class="box">
                          <div class="box-header">
-                        	<div class="col-xs-4">   
-                     			 <h3 class="box-title">Options</h3>
-                  			</div>
+                          <div class="col-xs-4">   
+                           <h3 class="box-title">Options</h3>
+                        </div>
                          </div>
                              <div class="box-body">                      
                                     <div class="form-group row">
@@ -75,17 +75,17 @@
 
                 <div class="col-md-8">
                      <div class="box box-info">
-                		<div class="box-header with-border">
-                 		<h3 class="box-title">Line Chart</h3>
-	                 		  <div class="box-tools pull-right">
-			                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-			                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-	                  		  </div>
-                		</div>
-                		<div class="box-body chart-responsive">
-                 		<div class="chart" id="line-chart" style="height: 300px;"></div>
-                		</div><!-- /.box-body -->
-             		 </div><!-- /.box -->
+                    <div class="box-header with-border">
+                    <h3 class="box-title">Line Chart</h3>
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                          <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                          </div>
+                    </div>
+                    <div class="box-body chart-responsive">
+                    <div class="chart" id="line-chart" style="height: 300px;"></div>
+                    </div><!-- /.box-body -->
+                 </div><!-- /.box -->
                 </div>                
          </div>
    </section>
@@ -99,7 +99,6 @@
 <script>
       $(function () {
         "use strict";
-
         // AREA CHART
         var area = new Morris.Area({
           element: 'revenue-chart',
@@ -122,7 +121,6 @@
           lineColors: ['#a0d0e0', '#3c8dbc'],
           hideHover: 'auto'
         });
-
         // LINE CHART
         var line = new Morris.Line({
           element: 'line-chart',
@@ -145,7 +143,6 @@
           lineColors: ['#3c8dbc'],
           hideHover: 'auto'
         });
-
         //DONUT CHART
         var donut = new Morris.Donut({
           element: 'sales-chart',
