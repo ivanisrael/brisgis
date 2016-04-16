@@ -11,45 +11,45 @@
         <!-- Main content -->
         <section class="content">
           <div class="row">
-          	<div class="col-md-3">
-        		<div class="box">
-            		<div class="box-header">
-            			<div class="col-xs-3">   
-                      		<h3 class="box-title">Options</h3>
+            <div class="col-md-3">
+            <div class="box">
+                <div class="box-header">
+                  <div class="col-xs-3">   
+                          <h3 class="box-title">Options</h3>
                         </div>
-            		</div>
-               			<div class="box-body">
-                 			 <div class="form-group row">
-                   				 <label class="col-md-4 control-label">Province</label>
-                   				 <br>
-                       				<div class="col-md-12">
-	                      				  <select class="form-control" id="barangay1" style"">
+                </div>
+                    <div class="box-body">
+                       <div class="form-group row">
+                           <label class="col-md-4 control-label">Province</label>
+                           <br>
+                              <div class="col-md-12">
+                                  <select class="form-control" id="barangay1" style"">
                                      <option >Province</option>
                                      <option disabled>────────────────────</option>
-	                           				 <option>Lanao del Norte</option>
-	                           			 </select>                          
-                        			</div>
-                 		     </div>
-                 		     <div class="form-group row">
-                     			 <label class="col-md-4 control-label">Municipality</label>
-                     			 <br>
-                        			<div class="col-md-12">
-                           				 <select class="form-control" id="municipality1">
+                                     <option>Lanao del Norte</option>
+                                   </select>                          
+                              </div>
+                         </div>
+                         <div class="form-group row">
+                           <label class="col-md-4 control-label">Municipality</label>
+                           <br>
+                              <div class="col-md-12">
+                                   <select class="form-control" id="municipality1">
                                      <option>Municipality</option>
                                      <option disabled>────────────────────</option>
-				                             <option>Iligan City</option>
-                           				 </select>                          
-                        			</div>
-                  			 </div>
-                  			 <div class="col-md-0">
-                     			 <a data-toggle="modal" data-target="" class="btn btn-primary btn-sm pull-right">
-                        	     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 
-                          			Show
-                     			 </a>
-                   			 </div>
-              			</div>
-       			 </div>
-    		</div>	
+                                     <option>Iligan City</option>
+                                   </select>                          
+                              </div>
+                         </div>
+                         <div class="col-md-0">
+                           <a data-toggle="modal" data-target="" class="btn btn-primary btn-sm pull-right">
+                               <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 
+                                Show
+                           </a>
+                         </div>
+                    </div>
+             </div>
+        </div>  
 
 
             <div class="col-xs-9">
