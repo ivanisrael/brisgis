@@ -58,7 +58,7 @@ class ProvinceController extends Controller
         $provinces = new ProvinceCRUD();
         $provinces->getAllProvinces($this->repo);
 
-        dd($provinces->showAllProvinces($this->output));
+        return $provinces->showAllProvinces($this->output);
 
 
         //return view('pages.provinces.index')->with('provinces',$provinces->showAllProvinces($this->output));
@@ -99,8 +99,9 @@ class ProvinceController extends Controller
         $province->getProvince($this->repo, $id);
         $municipalities = new MunicipalityCRUD();
         $municipalities->getAllMunicipalities($this->municipality_repo, $id);
-        dd($province->showProvince($this->output) , $municipalities->showAllMunicipalities($this->municipality_output));
-        dd();
+        return $province->showProvince($this->output);
+        return $municipalities->showAllMunicipalities($this->municipality_output);
+        
        /* return view('pages.provinces.show')
                         ->with('province',$province->showProvince($this->output))
                         ->with('municipalities', $municipalities->showAllMunicipalities($this->municipality_output));
