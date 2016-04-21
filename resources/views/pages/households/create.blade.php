@@ -5,7 +5,9 @@
 
       <section class="content-header">
           <h1>
-             Household Information
+              <a href="{{ route('households.indexUI') }}">
+                  <span class="fa fa-reply"></span>
+              </a> Household Informaton
           </h1>      
         </section>
         <!-- Main content -->
