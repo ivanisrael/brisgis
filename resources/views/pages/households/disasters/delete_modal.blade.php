@@ -1,5 +1,5 @@
-<!--Start Delete Barangay-->
-<div id="delete-barangay" class="modal fade" role="dialog">  
+<!--Start Delete Disaster-->
+<div id="delete-disaster" class="modal fade" role="dialog">  
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
         <div class="modal-content">
@@ -10,7 +10,7 @@
               <div class='row modal-body' style="text-align:right">
                   <form method="post" action="">    
           					  <div class="form-group">
-          								<center><strong><label>Are you sure you want to delete Barangay Hinaplanon?</label></strong></center>
+          								<center><strong><label>Are you sure you want to delete? </label></strong></center>
           						</div>
 				          </form> 
               </div>
@@ -22,4 +22,4 @@
        <!-- End Modal content-->
     </div>
 </div>
-<!-- End Delete Barangay-->
+<!-- End Delete Disaster-->
