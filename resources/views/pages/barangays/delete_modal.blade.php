@@ -1,4 +1,4 @@
-<!--Start Delete Barangay-->
+<!--Start Delete Province-->
 <div id="delete-barangay" class="modal fade" role="dialog">  
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
@@ -22,4 +22,4 @@
        <!-- End Modal content-->
     </div>
 </div>
-<!-- End Delete Barangay-->
+<!-- End Delete Province -->

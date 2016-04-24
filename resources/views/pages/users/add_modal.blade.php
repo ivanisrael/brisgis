@@ -1,4 +1,4 @@
-<!--Start Add User-->
+<!--Start Add Province-->
 <div id="add-user" class="modal fade" role="dialog">
     <div class="modal-dialog modal-md">
         <!-- Modal content-->
@@ -75,4 +75,4 @@
         <!-- End Modal content-->
     </div>
 </div>
-<!--End Add User-->
+<!--End Add Province-->

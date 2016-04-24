@@ -1,4 +1,4 @@
-<!--Start Edit User-->
+<!--Start Edit Province-->
 <div id="edit-user" class="modal fade" role="dialog">  
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
@@ -76,4 +76,4 @@
          <!-- End Modal content-->
     </div>
 </div>
-<!--End Edit User-->
+<!--End Edit Province-->

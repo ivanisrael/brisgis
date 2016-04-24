@@ -165,7 +165,7 @@
                               <div class="col-md-3">
                                       <a href="#" class="btn btn-primary btn-sm">
                                           <span class="glyphicon glyphicon-eye-open"></span>
-                                          Show
+                                          Submit
                                     </a>
                               </div>
                          </div>

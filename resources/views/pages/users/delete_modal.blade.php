@@ -1,4 +1,4 @@
-<!--Start Delete User-->
+<!--Start Delete Province-->
 <div id="delete-user" class="modal fade" role="dialog">  
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
@@ -22,4 +22,4 @@
        <!-- End Modal content-->
     </div>
 </div>
-<!-- End Delete User -->
+<!-- End Delete Province -->
