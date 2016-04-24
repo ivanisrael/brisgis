@@ -195,7 +195,7 @@
                    @include('pages.households.disasters.add_modal')            
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
+                  <table id="example2" class="table table-bordered table-striped">
                      <thead>
                        <tr>
                           <th>ID</th>
@@ -258,14 +258,7 @@
     <script>
       $(function () {
         $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
+        $('#example2').DataTable();
       });
     </script>
 @endsection
