@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@include('pages.households.families.add_modal')
 @section('main-content')
   <section class="content-header">
           <h1>
@@ -71,7 +70,7 @@
                                 <label class="col-md-5">Holding:</label>
                                 <div class="col-md-6">owned</div>
                         </div>
-                        <div class="box-header">
+            <!--             <div class="box-header">
                             <div class="col-xs-8">   
                                <h3 class="box-title">Flood Information:</h3>
                             </div>
@@ -108,7 +107,7 @@
                         <div class="form-group row">
                                 <label class="col-md-5">Contact Number:</label>
                                 <div class="col-md-6">09313131345</div>
-                        </div>
+                        </div> -->
                  		   
               			</div>
        			 </div>
@@ -126,7 +125,8 @@
                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
                           Add Family
                       </a>
-                    </div>                  
+                    </div>
+                   @include('pages.households.families.add_modal')                
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
@@ -178,6 +178,74 @@
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div><!-- /.col -->
+
+
+          <div class="col-md-8">
+              <div class="box">
+                <div class="box-header">
+                    <div class="col-xs-3">   
+                      <h3 class="box-title">Disaster</h3>
+                    </div>
+                    <div class="col-xs-0">
+                      <a data-toggle="modal" data-target="#add-disaster" style="float: right;" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+                          Add Disaster
+                      </a>
+                    </div>
+                   @include('pages.households.disasters.add_modal')            
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                     <thead>
+                       <tr>
+                          <th>ID</th>
+                          <th>Type</th>
+                          <th>Year</th>
+                          <th>Value</th>
+                          <th><center>Edit</center></th>
+                          <th><center>Delete</center></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Flood </td>
+                        <td>2011</td>
+                        <td>ambot lang</td>
+                        <td>
+                            <center>
+                              <a href="#" data-toggle="modal" data-target="#edit-disaster" >
+                                <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
+                              </a>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                              <a href="#" data-toggle="modal" data-target="#delete-disaster" >
+                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
+                              </a>
+                            </center>
+                        </td>
+                      </tr>                               
+                      @include('pages.households.disasters.delete_modal')
+                      @include('pages.households.disasters.edit_modal')
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>ID</th>
+                        <th>Family Identifier</th>
+                        <th>Monthly Income</th>
+                        <th>4ps</th>
+                        <th><center>Edit</center></th>
+                        <th><center>Delete</center></th>
+                      </tr>
+                   </tfoot>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+
+
           </div><!-- /.row -->
         </section><!-- /.content -->
 @endsection
