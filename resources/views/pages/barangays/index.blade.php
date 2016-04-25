@@ -16,7 +16,7 @@
                 <div class="box-header">
                   <div class="col-xs-3">   
                           <h3 class="box-title">Options</h3>
-                        </div>
+                   </div>
                 </div>
                     <div class="box-body">
                        <div class="form-group row">

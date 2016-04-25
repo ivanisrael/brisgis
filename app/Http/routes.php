@@ -72,6 +72,16 @@ Route::group(['middleware' => 'web'], function () {
     'uses' => 'PageController@mapfloodIndex'
     ]);
 
+    Route::get('/disastersUI',[
+    'as' => 'disasters.indexUI',
+    'uses' => 'PageController@disasterIndex'
+    ]);
+
+    Route::get('/healthUI',[
+    'as' => 'health.indexUI',
+    'uses' => 'PageController@healthIndex'
+    ]);
+
     Route::get('/municipalityUI',[
     'as' => 'provinces.cityUI',
     'uses' => 'PageController@municipalityIndex'
